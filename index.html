@@ -45,15 +45,16 @@
         </div>
         <div class="col-md-4 ">
           <ul class="d-flex justify-content-end gap-3 list-unstyled m-0  ">
-               <li class="list-unstyled mx-2 menu_item position-relative">
-              <a class="text-decoration-none text-dark text-uppercase fw-bold" href="#">Tài khoản </a>
-              <ul class="submenu position-absolute list-unstyled" >
+					<li class="site-nav-item site-nav-account">
+						<a href="/account" title="Tài khoản" rel="nofollow">Tài khoản</a>
+						<ul>
 							
-							<li><a rel="nofollow " href="./Dangnhap.html" title="Đăng nhập">Đăng nhập</a></li>
-							<li><a rel="nofollow" href="./DangKi.html" title="Đăng ký">Đăng ký</a></li>
+							<li><a rel="nofollow" href="/account/login" title="Đăng nhập">Đăng nhập</a></li>
+							<li><a rel="nofollow" href="/account/register" title="Đăng ký">Đăng ký</a></li>
 							
 						</ul>
-            </li>
+					</li>
+				
             <li class="list-unstyled mx-3">
               <a class="text-decoration-none text-dark text-uppercase fw-bold mx-1" href="#">
                 Giỏ hàng
@@ -171,7 +172,7 @@
                   <a class="nav-link" href="Stores.html">STORES</a>
                 </li>
                 <li class="nav-item px-5">
-                  <a class="nav-link" href="#">SERVICES</a>
+                  <a class="nav-link" href="./Serices.html">SERVICES</a>
                 </li>
               </ul>
             </div>
@@ -183,14 +184,47 @@
     <main>
       <!-----------------------------------NEW ARRIVALS--------------------------------------------->
       <section>
-        <a class="w-100" href="#"
-          ><img class="w-100" src="./img/slider_4.webp" alt="Description"
-        /></a>
+       <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel" data-bs-interval="2000"  data-bs-pause="false">
+  <div class="carousel-indicators">
+    <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+    <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
+    <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
+    <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="3" aria-label="Slide 4"></button>
+  <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="4" aria-label="Slide 5"></button>
+  </div>
+  <div class="carousel-inner">
+    <div class="carousel-item active">
+      <img src="./img/banner/slider_1.webp" class="d-block w-100" alt="...">
+    </div>
+    <div class="carousel-item">
+      <img src="./img/banner/slider_2.webp" class="d-block w-100" alt="...">
+    </div>
+    <div class="carousel-item">
+      <img src="./img/banner/slider_3.webp" class="d-block w-100" alt="...">
+    </div>
+      <div class="carousel-item">
+      <img src="./img/banner/slider_4.webp" class="d-block w-100" alt="...">
+    </div>
+     <div class="carousel-item">
+      <img src="./img/banner/slider_5.webp" class="d-block w-100" alt="...">
+    </div>
+  </div>
+  <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
+    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">Previous</span>
+  </button>
+  <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
+    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">Next</span>
+  </button>
+</div>
       </section>
      <section>
-    <div class="container py-5 text-center blog-title list-unstyled">
-      <p class="text-dark">NEW ARRIVAL</p>
-    </div>
+<div class="container py-5 text-center blog-title list-unstyled">
+          <a class="text-decoration-none">
+            <p class=" fw-bold small hover_text">NEW ARRIVAL</p>
+          </a>
+        </div>
     <div class="container">
       <div class="row" id="new-arrival-products"></div>
     </div>
@@ -205,7 +239,7 @@
       <section>
         <div class="container py-5 text-center blog-title list-unstyled">
           <a class="text-decoration-none">
-            <p class="text-dark">Be Classy</p>
+            <p class="hover_text">Be Classy</p>
           </a>
         </div>
       </section>
@@ -214,7 +248,7 @@
           <div class="row section_blog">
             <div class="col-md-3">
               <div class="card border-0 ">
-                <a href="" class="text-decoration-none">
+                <a href="title.html?id=1" class="text-decoration-none">
                   <img
                     class="card-img-top"
                     src="./img/anhbolg1.webp"
@@ -235,7 +269,7 @@
             </div>
             <div class="col-md-3">
               <div class="card border-0">
-                <a href="" class="text-decoration-none">
+                <a href="title.html?id=2" class="text-decoration-none">
                   <img
                     class="card-img-top"
                     src="./img/blog_beclassy2.webp"
@@ -258,7 +292,7 @@
             </div>
             <div class="col-md-3">
               <div class="card border-0">
-                <a href="" class="text-decoration-none">
+                <a href="title.html?id=3" class="text-decoration-none">
                   <img
                     class="card-img-top"
                     src="./img/blog_beclassy3.webp"
@@ -282,7 +316,7 @@
             </div>
             <div class="col-md-3">
               <div class="card border-0">
-                <a href="" class="text-decoration-none">
+                <a href="title.html?id=4" class="text-decoration-none">
                   <img
                     class="card-img-top"
                     src="./img/blog_beclassy4.webp"
@@ -361,7 +395,7 @@
      <section>
    <div class="container py-5 text-center blog-title list-unstyled">
           <a class="text-decoration-none">
-            <p class="text-dark">OXFORD</p>
+            <p class="hover_text">OXFORD</p>
           </a>
         </div>
     <div class="container">
@@ -380,7 +414,7 @@
   <section>
      <div class="container py-5 text-center blog-title list-unstyled">
           <a class="text-decoration-none">
-            <p class="text-dark">LOAFER</p>
+            <p class="hover_text">LOAFER</p>
           </a>
         </div>
     <div class="container">
@@ -391,7 +425,7 @@
         <div class="container">
           <div class="row py-5">
             <div class="col-md-12 d-flex justify-content-center">
-              <a href="" class="text-decoration-none text-dark">DERBY</a>
+              <a href="" class="text-decoration-none hover_text">DERBY</a>
             </div>
           </div>
    
@@ -404,26 +438,24 @@
         <div class="container">
           <div class="row py-5">
             <div class="col-md-12 d-flex justify-content-center">
-              <a href="" class="text-decoration-none text-dark">BAGS</a>
+              <a href="" class="text-decoration-none hover_text">Tin tức Be Classy</a>
             </div>
           </div>
           <div class="row">
             <div class="col-md-3">
               <div class="card border-0">
-                <a href="" class="text-decoration-none">
+                <a href="title.html?id=5" class="text-decoration-none">
                   <img
                     class="card-img-top"
-                    src="./img/anhbolg1.webp"
+                    src="//bizweb.dktcdn.net/thumb/large/100/292/624/articles/blog-copy.jpg?v=1757305882510" data-lazyload="//bizweb.dktcdn.net/thumb/large/100/292/624/articles/blog-copy.jpg?v=1757305882510" 
                     alt="Title"
                   />
                   <div class="card-body text-dark text-center">
                     <h6 class="small text-center pb-3" class="card-title">
-                      SẢN XUẤT TẠI VIỆT NAM
+                    SỰ KIỆN CƯỚI ÉCLAT - HÀNH TRÌNH TRỌN VẸN CHỈ TỪ 36 TRIỆU ĐỒNG
                     </h6>
                     <p class="card-text">
-                      Từ những nghệ nhân đóng giày dày dạn kinh nghiệm
-                      với&nbsp;mong muốn mang đến cho&nbsp;Quý Ông đôi giày mang
-                      Thương Hiệu Việt&nbsp;chất lượng tốt nhất.
+                    Một trong những sự kiện cưới được mong chờ nhất “Éclat - Where Your Brilliance Begins” sẽ chính thức diễn r...
                     </p>
                   </div>
                 </a>
@@ -431,20 +463,18 @@
             </div>
             <div class="col-md-3">
               <div class="card border-0">
-                <a href="" class="text-decoration-none">
+                <a href="title.html?id=6" class="text-decoration-none">
                   <img
                     class="card-img-top"
-                    src="./img/anhbolg1.webp"
+                    src="//bizweb.dktcdn.net/thumb/large/100/292/624/articles/blogcover-5a6036db-6a3e-4d86-a52a-f0c56c488663.jpg?v=1757068485533" 
                     alt="Title"
                   />
                   <div class="card-body text-dark text-center">
                     <h6 class="small text-center pb-3" class="card-title">
-                      SẢN XUẤT TẠI VIỆT NAM
+                    BE CLASSY CHÍNH THỨC RA MẮT BESUAL COLLECTION
                     </h6>
                     <p class="card-text">
-                      Từ những nghệ nhân đóng giày dày dạn kinh nghiệm
-                      với&nbsp;mong muốn mang đến cho&nbsp;Quý Ông đôi giày mang
-                      Thương Hiệu Việt&nbsp;chất lượng tốt nhất.
+                   Be Classy chính thức ra mắt BESUAL COLLECTION, bộ sưu tập giày công sở mang tinh thần cổ điển nhưng đồng th...
                     </p>
                   </div>
                 </a>
@@ -452,41 +482,37 @@
             </div>
             <div class="col-md-3">
               <div class="card border-0">
-                <a href="" class="text-decoration-none">
+                <a href="title.html?id=7" class="text-decoration-none">
                   <img
                     class="card-img-top"
-                    src="./img/anhbolg1.webp"
+                    src="//bizweb.dktcdn.net/thumb/large/100/292/624/articles/blog-e3e66677-c228-4cc2-9b81-084ff474a18b.jpg?v=1755492631047"
                     alt="Title"
                   />
                   <div class="card-body text-dark text-center">
                     <h6 class="small text-center pb-3" class="card-title">
-                      SẢN XUẤT TẠI VIỆT NAM
+                     BE CLASSY x MARINA OF LOVE: CHẠM ĐẾN GIẤC MƠ VỀ HẠNH PHÚC
                     </h6>
                     <p class="card-text">
-                      Từ những nghệ nhân đóng giày dày dạn kinh nghiệm
-                      với&nbsp;mong muốn mang đến cho&nbsp;Quý Ông đôi giày mang
-                      Thương Hiệu Việt&nbsp;chất lượng tốt nhất.
+                 Trong hai ngày 16 & 17.08 vừa qua, Be Classy đã đồng hành cùng sự kiện cưới Marina of Love tại Saigon S...
                     </p>
                   </div>
                 </a>
               </div>
-            </div>
+            </div>  
             <div class="col-md-3">
               <div class="card border-0">
-                <a href="" class="text-decoration-none">
+                <a href="title.html?id=8" class="text-decoration-none">
                   <img
                     class="card-img-top"
-                    src="./img/anhbolg1.webp"
+                    src="//bizweb.dktcdn.net/thumb/large/100/292/624/articles/blog-db64d64f-b1a1-4fb9-85bf-602a78767161.jpg?v=1754887331687"
                     alt="Title"
                   />
                   <div class="card-body text-dark text-center">
                     <h6 class="small text-center pb-3" class="card-title">
-                      SẢN XUẤT TẠI VIỆT NAM
+                    RECAP SỰ KIỆN CƯỚI “DỆT MƠ” – LỜI CẢM ƠN TỪ BE CLASSY
                     </h6>
                     <p class="card-text">
-                      Từ những nghệ nhân đóng giày dày dạn kinh nghiệm
-                      với&nbsp;mong muốn mang đến cho&nbsp;Quý Ông đôi giày mang
-                      Thương Hiệu Việt&nbsp;chất lượng tốt nhất.
+                 Vào ngày 09&10.08.2025 vừa qua, Be Classy hân hạnh được góp mặt tại WEDDING LOUNGE 2025 với chủ đề “Dệt...
                     </p>
                   </div>
                 </a>

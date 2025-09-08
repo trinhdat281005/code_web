@@ -174,85 +174,21 @@
       </div>
     </header>
   
-    <!--  Menu -->
-   <section>
-     <div class="evo-blog-header">
-	<div class="container">
-		<div class="row">
-			<div class="col-md-10 col-md-offset-1">
-				<div class="evo-blog-header-content">
-					<h1>Hệ thống cửa hàng</h1>
-				</div>
-			</div>
-		</div>
-	</div>
-</div>
-      </section>
-      <section class="mt-5">
- <div class="container my-5">
-  <div class="row">
-    <!-- Cột bên trái: danh sách cửa hàng -->
-    <div class="col-xs-12 col-sm-4 col-md-4">
-      <h6 class="fw-bold">Chọn tỉnh thành phố</h6>
-      <select id="city" class="form-select mb-3">
-        <option value="hanoi">Hà Nội</option>
-        <option value="hcm">Hồ Chí Minh</option>
-      </select>
+<div class="container">
+  <nav style="--bs-breadcrumb-divider: '>';" aria-label="breadcrumb">
+  <ol class="breadcrumb">
+    <li class="breadcrumb-item  "><a class="text-decoration-none text-black" href="./index.html">Trang chủ</a></li>
+    <li class="breadcrumb-item active "  id="breadcrumb-title" aria-current="page"></li>
+  </ol>
+</nav>
+  <div class="col-md-12 evo-article">
+    <h1 class="title-head"></h1>
 
-      <ul class="list-group border-3" id="store-list">
-        <!-- JS sẽ render các địa chỉ vào đây -->
-      </ul>
-    </div>
+    <div class="postby">Đăng bởi <b>Be Classy</b> vào lúc <span id="date"></span></div>
 
-    <!-- Cột bên phải: Google Map -->
-    <div class="col-xs-12 col-sm-8 col-md-8">
-      <iframe
-        id="map"
-        src=""
-        width="100%"
-        height="400"
-        style="border:0;"
-        allowfullscreen=""
-        loading="lazy"
-        referrerpolicy="no-referrer-when-downgrade">
-      </iframe>
-    </div>
+    <div class="article-details"></div>
   </div>
 </div>
-<section>
-  <div class="container">
-    <div class="row">
-<div class="col-md-6 ">
-<p  >
-  <img class="img-fluid" src="//bizweb.dktcdn.net/100/292/624/files/7d39427c-eea5-41d8-b28a-c43bdc8d0f30.jpg?v=1678265458906">
-</p>
-</div>
-<div class="col-md-6 small ">
-
-<p style="text-align: center;"><span style="font-size:24px;"><strong class="small">HỆ THỐNG CỬA HÀNG</strong></span></p>
-<p style="text-align: center;"><span style="font-size:20px;"><strong class="small">THÀNH PHỐ HỒ CHÍ MINH:</strong></span></p>
-<p style="text-align: center;"><span style="font-family:Verdana,Geneva,sans-serif;"><span style="font-size:18px;">73 Lý Tự Trọng, Phường Bến Thành, Quận 1</span></span></p>
-<p style="text-align: center;"><span style="font-family:Verdana,Geneva,sans-serif;"><span style="font-size:18px;"><i aria-hidden="true"></i>13 Nguyễn Thiện Thuật, Phường 2, Quận 3</span></span></p>
-<p style="text-align: center;"><span style="font-family:Verdana,Geneva,sans-serif;"><span style="font-size:18px;"><i aria-hidden="true"></i>210B Hồ Văn Huê, Phường 9, Quận Phú Nhuận</span></span></p>
-<p style="text-align: center;"><span style="font-size: 20px;"><b class="small">HÀ NỘI:</b></span></p>
-<p style="text-align: center;"><span style="font-family:Verdana,Geneva,sans-serif;"><span style="font-size:18px;">261 Phố Huế, Hai Bà Trưng</span></span></p>
-<p style="text-align: center;">&nbsp;</p>
-<p style="text-align: center;"><span style="font-size: 20px;"><b class="small">ĐÀ NẴNG:</b></span></p>
-<p style="text-align: center;"><span style="font-family:Verdana,Geneva,sans-serif;"><span style="font-size:18px;">371 Lê Duẩn, Phường Tân Chính,&nbsp;Quận Thanh Khê</span></span></p>
-<p style="text-align: center;">&nbsp;</p>
-<p style="text-align: center;">&nbsp;</p>
-<p style="text-align: center;"><span style="font-size: 20px;"><b class="small">BANGKOK, THAILAND:</b></span></p>
-<p style="text-align: center;"><span style="font-family:Verdana,Geneva,sans-serif;"><span style="font-size:18px;">69/36 Phaya Thai Rd, Ratchathewi (near BTS Phaya Thai)</span></span></p>
-<p style="text-align: center;">&nbsp;</p>
-<p style="text-align: center;"><span style="font-family:Verdana,Geneva,sans-serif;"><span style="font-size:16px;">Thời gian làm việc: <span style="color:#4e5f70;">09:00 - 22:00</span></span></span></p>
-<p style="text-align: center;"><span style="font-family:Verdana,Geneva,sans-serif;"><span style="font-size:16px;"><span style="color:#4e5f70;">Có chỗ đỗ Ôtô</span></span></span></p>
-<p style="text-align: center;"><span style="font-family:Verdana,Geneva,sans-serif;"><span style="font-size:16px;">Hotline: <span style="color:#4e5f70;"><a href="tel:(+84) 898515689">(+84) 898515689</a></span></span></span></p>
-<p style="text-align: center;">&nbsp;</p></div>
-</div>
-
-  </div>
-</section>
-    
 </section>
    
     <footer class="bg-light  py-5  border-bottom cuoi ">
@@ -476,6 +412,116 @@
     ></script>
 
 <script src="stores.js"></script>
+<script>
+  // Lấy id trên URL
+  const params = new URLSearchParams(window.location.search);
+  const id = params.get("id");
 
+  // Dữ liệu bài viết (bạn thay text + ảnh theo ý muốn)
+  const articles = {
+    1: {
+      title: "SẢN XUẤT TẠI VIỆT NAM",
+      date: "10/09/2020",
+      content: `
+        <p>Nói đến giày da, chúng ta nghĩ đến giày nhập khẩu. Thương hiệu giày tây việt nam dường như vẫn còn khá ít trên thị trường.  
+
+Be Classy là một trong những thương hiệu giày da có xưởng sản xuất và gia công tại Việt Nam. Với nguồn nguyên liệu nhập khẩu hoàn toàn từ nước ngoài. Từ những nghệ nhân đóng giày dày dạn kinh nghiệm nhất. 
+
+</p>
+      
+        <img data-thumb="original" original-height="3778" original-width="3024" src="//bizweb.dktcdn.net/100/292/624/files/ftr-2.jpg?v=1600151032423">
+        <p>Be Classy luôn cố gắng tạo ra những đôi giày da chất lượng, mang niềm tự hào của sản phẩm Việt Nam chất lượng cao, tự tay sản xuất gia công tạo nên từng đôi giày da tốt nhất gửi đến các Quý Ông Việt. </p>
+<img data-thumb="original" original-height="1787" original-width="1340" src="//bizweb.dktcdn.net/100/292/624/files/ftr-5.jpg?v=1600151087313">
+        <p>Be Classy tự hào mang đến cho khách hàng của mình những đôi giày da mang thương hiệu Việt chất lượng và chuẩn phom nhất.</p>
+      `
+    },
+    2: {
+      title: "VẬT TƯ NHẬP KHẨU",
+      date: "10/09/2020",
+      content: `
+        <p>Giày da Be Classy được làm từ những mảng da bò Ý được chọn lọc kỹ càng để đảm bảo thành phẩm là một đôi giày chất lượng và lên màu giày chuẩn nhất. </p>
+       <img data-thumb="original" original-height="1920" original-width="1080" src="//bizweb.dktcdn.net/100/292/624/files/ftr.jpg?v=1600151158614">
+        <p>Hoàn toàn được làm từ nguyên liệu ngoại nhập, nên giày da Be Classy không vượt khỏi khuôn khổ của một đôi giày Tây về cả kiểu dáng, chất liệu và màu sắc. </p>
+      <img data-thumb="original" original-height="3537" original-width="2653" src="//bizweb.dktcdn.net/100/292/624/files/ftr-11.jpg?v=1600151182454">`
+    },
+    3: {
+      title: "LAST GIÀY DÀNH RIÊNG CHO QUÝ ÔNG VIỆT",
+      date: "10/09/2020",
+      content: `
+        <p>Với châm ngôn “Giày Tây dành cho Ta” - Be Classy thiết kế Phom (Last) giày phù hợp với phom chân chuẩn của Quý Ông Việt. Tạo nên những đôi giày da mang nét Việt riêng, dành riêng cho người Việt.</p>
+        <img data-thumb="original" original-height="3486" original-width="2615" src="//bizweb.dktcdn.net/100/292/624/files/ftr-7.jpg?v=1600151227853">
+        <p>Cùng mong muốn mang đến cho khách hàng những đôi giày da tốt nhất mang thương hiệu Việt Nam. Chuẩn phom chân và thiết kế phù hợp nhất. </p>
+<img data-thumb="original" original-height="3670" original-width="2938" src="//bizweb.dktcdn.net/100/292/624/files/ftr-3.jpg?v=1600151249461">
+      `
+    },
+    4: {
+      title: "CHẤT LƯỢNG CAO CẤP",
+      date: "10/09/2020",
+      content: `
+       <p>Be Classy áp dụng chính sách bảo hành giày 3 năm - bảo dưỡng 3 lần/miễn phí dành cho khách hàng. Luôn có đội ngũ hỗ trợ và tư vấn tất cả các vấn đề về giày da trong quá trình khách hàng sử dụng. .</p>
+<img data-thumb="original" original-height="2452" original-width="2453" src="//bizweb.dktcdn.net/100/292/624/files/ftr-6.jpg?v=1600151295980">
+        <p>Không chỉ là người tạo ra những sản phẩm giày da mang nét Việt riêng. Be Classy còn mong muốn mình là “người đồng hành” cùng khách hàng trong quá trình sử dụng giày lâu dài.  Với chương trình hậu mãi cực kỳ hấp dẫn, đây sẽ là sự lựa chọn tốt nhất dành cho các Quý Ông </p>
+<img data-thumb="original" original-height="2583" original-width="1937" src="//bizweb.dktcdn.net/100/292/624/files/ftr-10.jpg?v=1600151319931">
+      `
+    },
+     5: {
+      title: "SỰ KIỆN CƯỚI ÉCLAT - HÀNH TRÌNH TRỌN VẸN CHỈ TỪ 36 TRIỆU ĐỒNG",
+      date: "08/09/2025",
+      content: `
+       <p>Một trong những sự kiện cưới được mong chờ nhất “Éclat - Where Your Brilliance Begins” sẽ chính thức diễn ra vào ngày 13 & 14/09/2025 tại 15 Mai Hắc Đế, P. Nguyễn Du, Q. Hai Bà Trưng, Hà Nội. Đây là cơ hội vàng cho các cặp đôi chuẩn bị cho ngày trọng đại của mình với những ưu đãi đặc biệt và dịch vụ cưới trọn gói cao cấp với giá ưu đãi chỉ từ 36.000.000 VNĐ.
+
+</p>
+<img data-thumb="original" original-height="1000" original-width="1000" src="//bizweb.dktcdn.net/100/292/624/files/2025-t8-be-classy0582.jpg?v=1757305780987">
+        <p>Sự kiện cưới Éclat mang đến trải nghiệm toàn diện khi quy tụ những thương hiệu hàng đầu trong ngành cưới. Các cặp đôi sẽ tìm thấy mọi thứ cần thiết cho đám cưới trong mơ: từ trang phục, trang sức, dịch vụ chụp ảnh cho đến không gian tổ chức, tất cả đều được thiết kế để tạo nên một hành trình cưới trọn vẹn, tinh tế và đáng nhớ. </p>
+<img data-thumb="original" original-height="1000" original-width="1000" src="//bizweb.dktcdn.net/100/292/624/files/2025-t8-be-classy0753.jpg?v=1757305801892">
+      `
+    }, 
+    6: {
+      title: "BE CLASSY CHÍNH THỨC RA MẮT BESUAL COLLECTION",
+      date: "05/09/2025",
+      content: `
+       <p>Be Classy chính thức ra mắt BESUAL COLLECTION, bộ sưu tập giày công sở mang tinh thần cổ điển nhưng đồng thời mở ra chuẩn mực mới về sự thoải mái và ứng dụng.
+
+</p>
+<img data-thumb="original" original-height="1000" original-width="1000" src="//bizweb.dktcdn.net/100/292/624/files/4-d7db3cb0-c2af-4df7-9133-867e541b9912.jpg?v=1757068373654">
+        <p>BESUAL COLLECTION giới thiệu bốn thiết kế chủ đạo: Besual Derby, Besual Brogues Derby, Besual Loafer và Besual Oxford. Mỗi đôi giày đều được chế tác tinh tế, phản ánh trọn vẹn DNA của Be Classy: lịch lãm, bền bỉ và phù hợp trong nhiều hoàn cảnh.
+
+ </p>
+<img data-thumb="original" original-height="1000" original-width="1000" src="//bizweb.dktcdn.net/100/292/624/files/3-28af6cf8-ad8e-44bc-be7f-2d01fdbad8b9.jpg?v=1757068400019">
+      `
+    },
+     7: {
+      title: "BE CLASSY x MARINA OF LOVE: CHẠM ĐẾN GIẤC MƠ VỀ HẠNH PHÚC",
+      date: "18/08/2025 ",
+      content: `
+       <p>Trong hai ngày 16 & 17.08 vừa qua, Be Classy đã đồng hành cùng sự kiện cưới Marina of Love tại Saigon South Marina Club, mang đến những thiết kế tinh tế, chỉn chu và sự sang trọng. 
+
+</p>
+<img data-thumb="original" original-height="1000" original-width="1000" src="//bizweb.dktcdn.net/100/292/624/files/dscf0181.jpg?v=1755492394687">
+        <p>Mini Wedding Showcase lần này mở ra một góc nhìn mới cho các cặp đôi hiện đại: hôn lễ trên du thuyền với không gian lãng mạn, sang trọng và đầy cảm xúc. Đây không chỉ đơn thuần là một sự kiện cưới, mà còn là trải nghiệm nơi bạn có thể viết nên câu chuyện tình riêng, khắc họa ngày trọng đại bằng những nghi thức độc bản và tinh tế.</p>
+<img data-thumb="original" original-height="2583" original-width="1937" src="//bizweb.dktcdn.net/100/292/624/files/ftr-10.jpg?v=1600151319931">
+      `
+    },
+     8: {
+      title: "RECAP SỰ KIỆN CƯỚI “DỆT MƠ” – LỜI CẢM ƠN TỪ BE CLASSY",
+      date: " 11/08/2025",
+      content: `
+       <p>Vào ngày 09&10.08.2025 vừa qua, Be Classy hân hạnh được góp mặt tại WEDDING LOUNGE 2025 với chủ đề “Dệt Mơ” – Một sự kiện cưới đẳng cấp, nơi những giấc mơ về ngày trọng đại được thăng hoa trong không gian chỉn chu, tinh tế và đầy sang trọng..</p>
+<img data-thumb="original" original-height="1000" original-width="1000" src="//bizweb.dktcdn.net/100/292/624/files/pat01886.jpg?v=1754886825943">
+        <p>Trong suốt hai ngày diễn ra sự kiện cưới, Be Classy đã cùng các cặp đôi trải qua những khoảnh khắc đầy cảm xúc, từng chi tiết đều được chăm chút để gợi mở một hành trình hôn nhân trọn vẹn. Đây là nơi để các sản phẩm của Be Classy được đến gần hơn với các vị khách quý, là điểm chạm kết nối tình yêu, phong cách và giá trị thẩm mỹ mà chúng tôi luôn gìn giữ.</p>
+<img data-thumb="original" original-height="1000" original-width="1000" src="//bizweb.dktcdn.net/100/292/624/files/pat01888.jpg?v=1754886846124">
+      `
+    }
+  };
+
+  // Lấy bài viết, nếu không có id thì mặc định là bài 1
+  const article = articles[id] || articles[1];
+
+  // Gắn dữ liệu vào DOM
+  document.querySelector(".title-head").innerText = article.title;
+  document.querySelector("#date").innerText = article.date;
+  document.querySelector(".article-details").innerHTML = article.content;
+  document.querySelector("#breadcrumb-title").innerText = article.title;
+</script>
   </body>
 </html>

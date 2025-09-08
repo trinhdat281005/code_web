@@ -2,7 +2,7 @@
 window.newArrivalProducts =[
   {
     id:1,
-    mainImg: "./img/OF07/den.webp",
+    mainImg: "./img/OF07/nau.webp",
     thumbs: [
       "./img/OF07/den.webp",
       "./img/OF07/dscf6945.webp",

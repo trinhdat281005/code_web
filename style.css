@@ -541,42 +541,78 @@
   background: #f4f4f4;
   color: #000;
 }
-.menu_item .submenu {
-  margin-top: 10px;
-  display: none;
-  background: #fff;
-  border: 1px solid #bab9b9;
-  box-shadow: #1c1c1c;
-  padding: 5px 0;
-  min-width: 190px;
-  top: 100%;
-  left: 0;
-  z-index: 1000;
-  color: #000;
-}
-.menu_item:hover .submenu {
-  display: block;
-}
-.menu_item .submenu:hover {
-  display: block;
-}
-.submenu li a {
-  display: block;
-  padding: 8px 15px;
-  color: #333;
-  text-decoration: none;
-}
 
-.submenu li a:hover {
-  background: #f5f5f5;
-  color: #000;
+ .site-nav-item {
+  position: relative;
+  list-style: none;
 }
-.menu_item {
-  position: relative; /* rất quan trọng để submenu hiển thị đúng */
+ .site-nav-item > a {
+  font-weight: 500;
+  color: #1c1c1c;
+  text-transform: uppercase;
+  display: block;
+  position: relative;
+  padding: 0 15px;
+  white-space: nowrap;
 }
-
-.submenu {
-  position: absolute;
-  top: 100%;
-  left: 0;
+ .site-nav-item.site-nav-account ul li a {
+    display: block;
+    padding: 7px 10px;
+    color: #1c1c1c;
+    text-transform: uppercase;
+ }
+.evo-article {
+  margin-top: 30px;
+}
+.evo-article .title-head {
+  text-align: center;
+  font-size: 26px;
+  line-height: 28px;
+  margin: 0;
+  font-weight: 400;
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+  color: #1c1c1c;
+}
+.evo-article .postby {
+  text-align: center;
+  font-size: 14px;
+  line-height: 16px;
+  letter-spacing: 1px;
+  font-weight: 500;
+  text-transform: uppercase;
+  margin: 0;
+  margin-top: 15px;
+}
+.evo-article .article-details {
+  margin-top: 50px;
+}
+@media (min-width: 768px) {
+  .evo-article .article-details img {
+    max-width: 600px;
+    display: block;
+  }
+}
+.evo-article .article-details img {
+  height: auto !important;
+  margin-left: auto;
+  margin-right: auto;
+}
+.evo-article .title-head {
+  text-align: center;
+  font-size: 30px;
+  line-height: 28px;
+  margin: 0;
+  font-weight: 400;
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+  color: #1c1c1c;
+}
+.hover_text {
+  color: rgb(0, 0, 0); /* đổi màu chữ */
+  font-weight: 500;
+  font-size: 35px;
+}
+.hover_text:hover {
+  color: rgb(152, 76, 5); /* đổi màu chữ */
 }
