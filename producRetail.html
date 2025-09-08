@@ -33,7 +33,7 @@
           <a class="text-decoration-none text-dark text-uppercase fw-bold">0971797927</a>
         </div>
         <div class="col-md-4">
-          <a href="">
+          <a href="index.html">
             <img
               src="//bizweb.dktcdn.net/100/292/624/themes/758446/assets/logo.png?1756437777517"
               data-lazyload="//bizweb.dktcdn.net/100/292/624/themes/758446/assets/logo.png?1756437777517"
@@ -174,23 +174,20 @@
     </header>
   
    <Main>
-    <!---Giỏ hàng--->
+    
   <section class="product-cart">
     <div class="container"> 
       <div class="row">
+        <!--------------------------------------Ben trai------------------------------- -->
         <div class="col-md-6">
-        <div> 
-          <a href="">
-            <img src="./img/OF02/dscf0272.webp" alt="">
-          </a>
-        </div>
+          <div id="product-images"></div>
        <div class="slider slider-nav">
-  <!-- Nút prev -->
+  
   <button type="button" class="btn btn-prev">
     <i class="fa-solid fa-chevron-left"></i>
   </button>
 
-  <!-- Slick list -->
+
   <div class="slick-list">
     <div class="slick-track d-flex">
       <div class="fixs slick-slide slick-current slick-active">
@@ -214,21 +211,23 @@
     </div>
   </div>
 
-  <!-- Nút next -->
+ 
   <button type="button" class="btn btn-next">
     <i class="fa-solid fa-chevron-right"></i>
   </button>
 </div>
 
         </div>
+
+        <!-------------------Ben phai-->
       <div class="col-md-6 py-4 ">
         <div class="mb-3">
-          <h1>CHARLES CAPTOE OXFORD - OF02</h1>
+           <h1 id="product-name"></h1>
         </div>
         <div  class="mb-3" >
-          <span>1.400.000₫</span>
-          <span class="text-decoration-line-through">1.750.000₫</span>
-          <span>Tiết kiệm: 350.000₫</span>
+        <span id="product-price-new"></span>
+            <span class="text-decoration-line-through" id="product-price-old"></span>
+            <span id="product-discount"></span>
         </div>
         <div class="form-product margin-top-15  mb-5 ">
            <form action="">
@@ -652,6 +651,7 @@
       <a  class="text-decoration-none text-dark fw-bold ">Sapo</a>
     </div>
     </section>
+      <script src="products.js"></script>
     <!-- Bootstrap JavaScript Libraries -->
     <script
       src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
@@ -664,67 +664,66 @@
       integrity="sha384-BBtl+eGJRgqQAUMxJ7pMwbEyER4l1g+O15P+16Ep7Q9Q+zqX6gSbd85u4mG4QzX+"
       crossorigin="anonymous"
     ></script>
-<script>
-  document.querySelectorAll('.custom-card').forEach(function(card) {
-    const mainImg = card.querySelector('.main-img');
-    const thumbnails = card.querySelectorAll('.thumb');
-
-    let index = 0;
-    let interval;
-
-    // Hover vào card: tự động chuyển ảnh
-    card.addEventListener('mouseenter', () => {
-      interval = setInterval(() => {
-        index = (index + 1) % thumbnails.length;
-        mainImg.src = thumbnails[index].src;
-      }, 1000);
-    });
-
-    // Rời chuột: dừng và reset ảnh đầu tiên
-    card.addEventListener('mouseleave', () => {
-      clearInterval(interval);
-      index = 0;
-      mainImg.src = thumbnails[0].src;
-    });
-
-    // Click vào ảnh nhỏ => đổi ảnh chính
-    thumbnails.forEach((thumb, i) => {
-      thumb.addEventListener('click', () => {
-        clearInterval(interval); // dừng auto chuyển
-        index = i;
-        mainImg.src = thumb.src;
-      });
-    });
-  });
   
+
+  <script>
+
+  // Lấy id từ url
+  const params = new URLSearchParams(window.location.search);
+  const id = parseInt(params.get("id"), 10);
+
+  // Nếu bạn đã merge products trong products.js, biến products là global
+  if (!window.products) {
+    console.error('products is not defined. Hãy chắc products.js đã được include và đã merge các mảng thành `products`.');
+  }
+
+  const product = window.products && window.products.find(p => p.id === id);
+
+  // Các element targe sẵn có trong HTML của bạn
+  const elName = document.getElementById('product-name');
+  const elPriceNew = document.getElementById('product-price-new');
+  const elPriceOld = document.getElementById('product-price-old');
+  const elDiscount = document.getElementById('product-discount');
+  const elImages = document.getElementById('product-images');
+
+  // slider track trong HTML (nếu bạn muốn cập nhật thumbnails)
+  const slickTrack = document.querySelector('.slick-track');
+
+  if (!product) {
+    // Nếu không có product, show thông báo
+    const container = document.createElement('div');
+    container.innerHTML = '<p>Sản phẩm không tồn tại</p>';
+    document.body.prepend(container);
+  } else {
+    // Gán text
+    if (elName) elName.textContent = product.title;
+    if (elPriceNew) elPriceNew.textContent = product.priceNew;
+    if (elPriceOld) elPriceOld.textContent = product.priceOld;
+    if (elDiscount) elDiscount.textContent = product.discount;
+
+    // Hiển thị ảnh chính
+    if (elImages) {
+      elImages.innerHTML = `<img id="main-product-img" src="${product.mainImg}" class="img-fluid" alt="${product.title}">`;
+    }
+
+    // Render thumbnails vào slider (nếu tồn tại)
+    if (slickTrack) {
+      slickTrack.innerHTML = product.thumbs.map((src, idx) => {
+        return `<div class="fixs slick-slide" data-idx="${idx}"><img src="${src}" alt="${product.title} thumb ${idx}"></div>`;
+      }).join('');
+      // gắn sự kiện click cho thumbnails để thay ảnh chính
+      slickTrack.querySelectorAll('.fixs img').forEach(img => {
+        img.style.cursor = 'pointer';
+        img.addEventListener('click', (e) => {
+          const main = document.getElementById('main-product-img');
+          if (main) main.src = e.currentTarget.src;
+        });
+      });
+    }
+  }
 </script>
 
-<script>$('.slider-nav').slick({
-  slidesToShow: 5,
-  slidesToScroll: 1,
-  prevArrow: $('.btn-prev'),
-  nextArrow: $('.btn-next'),
-  focusOnSelect: true,
-  infinite: false
-});
-</script>
-<script>
-  const buttons = document.querySelectorAll(".product_tab .nut");
-  const contents = document.querySelectorAll(".tab-content > div");
 
-  buttons.forEach(btn => {
-    btn.addEventListener("click", () => {
-   
-      contents.forEach(c => c.classList.remove("active"));
-      buttons.forEach(b => b.classList.remove("active"));
-
-     
-      const target = btn.getAttribute("data-tab");
-      document.getElementById(target).classList.add("active");
-      btn.classList.add("active");
-    });
-  });
-</script>
 
   </body>
 </html>

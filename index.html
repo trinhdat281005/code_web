@@ -710,6 +710,8 @@
       <a  class="text-decoration-none text-dark fw-bold ">Sapo</a>
     </div>
     </section>
+    <script src="./producRetail.html"></script>
+<script src="products.js"></script>
     <!-- Bootstrap JavaScript Libraries -->
     <script
       src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
@@ -758,186 +760,7 @@
 
 
    <script>
-   const newArrivalProducts = [
-  {
-    mainImg: "./img/OF07/den.webp",
-    thumbs: [
-      "./img/OF07/den.webp",
-      "./img/OF07/dscf6945.webp",
-      "./img/OF07/nau.webp",
-    ],
-    category: "NEW ARRIVAL",
-    title: "TONKIN CAPTOE OXFORD - OF07",
-    priceNew: "1.400.000đ",
-    priceOld: "1.750.000đ",
-    discount: "-20%",
-  },
-];
-
-const oxfordProducts = [
-  {
-    mainImg: "./img/OF02/dscf0272.webp",
-    thumbs: [
-      "./img/OF02/dscf0272.webp",
-      "./img/OF02/dscf6967.webp",
-      "./img/OF02/dscf6941.webp",
-    ],
-    category: "OXFORD",
-    title: "CHARLES CAPTOE OXFORD - OF02",
-    priceNew: "1.400.000đ",
-    priceOld: "1.750.000đ",
-    discount: "-20%",
-  },
-  {
-    mainImg: "./img/OF32/dscf8054.webp",
-    thumbs: [
-      "./img/OF32/dscf8054.webp",
-      "./img/OF32/dscf9565.webp",
-      "./img/OF32/z4838030916872-882737d7eaf7c8af77deae5b2dbffea2.webp",
-    ],
-    category: "OXFORD",
-    title: "SAVILLE CAPTOE OXFORD - OF32",
-    priceNew: "1.400.000đ",
-    priceOld: "1.750.000đ",
-    discount: "-20%",
-  },
-   {
-    mainImg: "./img/OF07/den.webp",
-    thumbs: [
-      "./img/OF07/den.webp",
-      "./img/OF07/dscf6945.webp",
-      "./img/OF07/nau.webp",
-    ],
-    category: "OXFORD",
-    title: "SAVILLE CAPTOE OXFORD - OF32",
-    priceNew: "1.400.000đ",
-    priceOld: "1.750.000đ",
-    discount: "-20%",
-  },
-   {
-    mainImg: "./img/OF-TCCC08/dscf6419-2.webp",
-    thumbs: [
-      "./img/OF-TCCC08/dscf6419-2.webp",
-      "img/OF-TCCC08/dscf7759.webp",
-      "img/OF-TCCC08/dscf6429-d6c70724-5321-453d-adc3-5c4896f6ddff.webp",
-    ],
-    category: "OXFORD",
-    title: "SAVILLE CAPTOE OXFORD - OF32",
-    priceNew: "1.400.000đ",
-    priceOld: "1.750.000đ",
-    discount: "-20%",
-  },
-];
-
-const loaferProducts = [
-  {
-    mainImg: "./img/LF20/dscf1271.webp",
-    thumbs: [
-      "./img/LF20/dscf1271.webp",
-      "./img/LF20/dscf1273.webp",
-      "./img/LF20/dscf1275.webp",
-    ],
-    category: "LOAFER",
-    title: "CLASSIC LOAFER - LF20",
-    priceNew: "1.400.000đ",
-    priceOld: "1.750.000đ",
-    discount: "-20%",
-  },
-  {
-    mainImg: "./img/LF18M/dscf1803.webp",
-    thumbs: [
-      "./img/LF18M/dscf1803.webp",
-      "./img/LF18M/dscf1804.webp",
-      "./img/LF18M/dscf2673.webp",
-    ],
-    category: "LOAFER",
-    title: "ELEGANT LOAFER - LF18M",
-    priceNew: "1.400.000đ",
-    priceOld: "1.750.000đ",
-    discount: "-20%",
-  },
-    {
-    mainImg: "img/LF-PF002/dscf8596.webp",
-    thumbs: [
-      "img/LF-PF002/dscf8596.webp",
-      "img/LF-PF002/dscf8601.webp",
-      "img/LF-PF002/dscf8602.webp",
-    ],
-    category: "LOAFER",
-    title: "ELEGANT LOAFER - LF18M",
-    priceNew: "1.400.000đ",
-    priceOld: "1.750.000đ",
-    discount: "-20%",
-  },
-    {
-    mainImg: "img/PF004/dscf0096.webp",
-    thumbs: [
-      "img/PF004/dscf0096.webp",
-      "img/PF004/dscf8730.webp",
-      "img/PF004/dscf8731-074a4e16-1ad9-4f9e-8f26-4df32f2139c8.webp",
-    ],
-    category: "LOAFER",
-    title: "ELEGANT LOAFER - LF18M",
-    priceNew: "1.400.000đ",
-    priceOld: "1.750.000đ",
-    discount: "-20%",
-  },
-];
-const derbyProducts = [
-  {
-    mainImg: "img/DB07/dscf1507.webp",
-    thumbs: [
-      "img/DB07/dscf1507.webp",
-      "img/DB07/dscf3581.webp",
-      "img/DB07/dscf3587.webp",
-    ],
-    category: "DERBY",
-    title: "CLASSIC DERBY - DB01",
-    priceNew: "1.200.000đ",
-    priceOld: "1.500.000đ",
-    discount: "-20%",
-  },
-    {
-    mainImg: "img/DB14/dscf8725.webp",
-    thumbs: [
-      "img/DB14/dscf8725.webp",
-      "img/DB14/dscf8885.webp",
-      "img/DB14/dscf8897.webp",
-    ],
-    category: "DERBY",
-    title: "CLASSIC DERBY - DB01",
-    priceNew: "1.200.000đ",
-    priceOld: "1.500.000đ",
-    discount: "-20%",
-  },
-    {
-    mainImg: "img/DB24/dscf8708.webp",
-    thumbs: [
-      "img/DB24/dscf8708.webp",
-      "img/DB24/dscf8710.webp",
-      "img/DB24/dscf8713.webp",
-    ],
-    category: "DERBY",
-    title: "CLASSIC DERBY - DB01",
-    priceNew: "1.200.000đ",
-    priceOld: "1.500.000đ",
-    discount: "-20%",
-  },
-    {
-    mainImg: "img/DB34/dscf8882.webp",
-    thumbs: [
-      "img/DB34/dscf8882.webp",
-      "img/DB34/dscf8898.webp",
-      "img/DB34/dscf9534.webp",
-    ],
-    category: "DERBY",
-    title: "CLASSIC DERBY - DB01",
-    priceNew: "1.200.000đ",
-    priceOld: "1.500.000đ",
-    discount: "-20%",
-  },
-];
-
+   
 function render(products, containerId) {
   const container = document.getElementById(containerId);
   if (!container) return; // tránh lỗi null
@@ -966,18 +789,23 @@ function render(products, containerId) {
               <span class="text-danger fw-bold me-2">${p.priceNew}</span>
               <span class="text-muted text-decoration-line-through">${p.priceOld}</span>
             </p>
-            <button class="btn nutchon choose-button">Tùy chọn</button>
+          <a href="producRetail.html?id=${p.id}" class="btn btn-outline-dark w-100">Tùy chọn</a>
           </div>
         </div>
       </div>
     `;
   });
 }
+// hàm bên product retail
+function goToDetail(productName) {
+ 
+  window.location.href = `product-detail.html?name=${encodeURIComponent(productName)}`;
+}
 
-render(newArrivalProducts, "new-arrival-products");
-render(oxfordProducts, "oxford-products");
-  render(loaferProducts, "loafer-products");
-  render(derbyProducts, "derby-products");
+render(window.newArrivalProducts, "new-arrival-products");
+render(window.oxfordProducts, "oxford-products");
+  render(window.loaferProducts, "loafer-products");
+  render(window.derbyProducts, "derby-products");
 </script>
 <script>
   function initHoverEffect() {
