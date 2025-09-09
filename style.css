@@ -616,3 +616,18 @@
 .hover_text:hover {
   color: rgb(152, 76, 5); /* đổi màu chữ */
 }
+/* chữ mặc định */
+.nav_pills .nav_link {
+  color: #000; /* đen */
+}
+
+/* khi hover */
+.nav_pills .nav_link:hover {
+  color: #dc3545; /* đỏ Bootstrap */
+}
+
+/* khi active */
+.nav_pills .nav_link.active {
+  background-color: #f8f9fa; /* nền sáng */
+  color: #000 !important;    /* chữ đen */
+}

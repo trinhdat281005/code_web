@@ -190,24 +190,7 @@
 
   <div class="slick-list">
     <div class="slick-track d-flex">
-      <div class="fixs slick-slide slick-current slick-active">
-        <img src="./img/OF02/dscf0272.webp" alt="">
-      </div>
-      <div class="fixs slick-slide slick-active">
-        <img src="./img/OF02/dscf0279.webp" alt="">
-      </div>
-      <div class="fixs slick-slide slick-active">
-        <img src="./img/OF02/dscf5441-ea3d1c4a-14c9-41ec-b6e6-cec4fc9419fc.webp" alt="">
-      </div>
-      <div class="fixs slick-slide slick-active">
-        <img src="./img/OF02/dscf5444.webp" alt="">
-      </div>
-      <div class="fixs slick-slide slick-active">
-        <img src="./img/OF02/dscf6967.webp" alt="">
-      </div>
-      <div class="fixs slick-slide slick-active">
-        <img src="./img/OF02/dscf6969.webp" alt="">
-      </div>
+   
     </div>
   </div>
 
@@ -379,32 +362,23 @@
       </div>
       
       </div>
-    <div class="product_tab">
-  <button class="nut" data-tab="tab1">MÔ TẢ SẢN PHẨM</button>
-  <button class="nut" data-tab="tab2">AFTER-SALES SERVICE</button>
-  <button class="nut" data-tab="tab3">HƯỚNG DẪN CHỌN SIZE</button>
-</div>
+    <ul class="nav nav btn-dark nav-pills mt-4" id="productTab" role="tablist">
+      <li class="nav_item" role="presentation">
+        <button class="nav_link bg-light 
+          text-black" id="tab1-tab" data-bs-toggle="tab" data-bs-target="#tab1" type="button" role="tab">MÔ TẢ SẢN PHẨM</button>
+      </li>
+      <li class="nav-item" role="presentation">
+        <button class="nav-link bg-light text-black" id="tab2-tab" data-bs-toggle="tab" data-bs-target="#tab2" type="button" role="tab">AFTER-SALES SERVICE</button>
+      </li>
+      <li class="nav-item" role="presentation">
+        <button class="nav-link bg-light  text-black" id="tab3-tab" data-bs-toggle="tab" data-bs-target="#tab3" type="button" role="tab">HƯỚNG DẪN CHỌN SIZE</button>
+      </li>
+    </ul>
 
-<div class="tab-content border-top mt-4  pt-4">
+<div class="tab-content p-3  border-bottom">
 
   <div id="tab1" class="tab-sp active">
-    <p style="text-align: center;"><span style="font-size:20px;"><strong>CHARLES CAPTOE OXFORD - OF02</strong></span></p>
-    <p style="text-align: center;"><strong>CHARLES CAPTOE OXFORD</strong> là mẫu giày được Be Classy cân chỉnh tỉ mỉ và cũng là mẫu đầu tiên trong dòng giày cải tiến mới.</p>
-    <p style="text-align: center;">Thay vì phom giày thô to thường thấy, đôi Oxford này lại có thiết kế ôm chân, giúp cho đôi chân trở nên thon gọn nhưng lại không gây ra cảm giác gò bó khi di chuyển.</p>
-    <p style="text-align: center;">
-      <iframe align="middle" frameborder="0" height="315" scrolling="no" src="https://www.youtube.com/embed/awItgj53Slw" width="560"></iframe>
-    </p>
-    <p style="text-align: center;">
-      <img src="//bizweb.dktcdn.net/100/292/624/files/of02-bbab2f84-cd1d-4b11-9507-405838985b63.jpg?v=1749453831262">
-    </p>
-    <ul>
-      <li style="text-align: center;">Da ngoài (Upper): Da Bò Ý</li>
-      <li style="text-align: center;">Lót trong (Sock Lining): Da Bò Mộc</li>
-      <li style="text-align: center;">Cấu trúc (Construction): McKAY</li>
-      <li style="text-align: center;">Đế (Outsole): Đế Cao Su</li>
-      <li style="text-align: center;">Size (EU): 38 → 45</li>
-      <li style="text-align: center;">Bảo hành: 3 NĂM</li>
-    </ul>
+   <!-- Nội dung Tab 1 sẽ render bằng JS -->
   </div>
 
 
@@ -713,16 +687,57 @@
       }).join('');
       // gắn sự kiện click cho thumbnails để thay ảnh chính
       slickTrack.querySelectorAll('.fixs img').forEach(img => {
-        img.style.cursor = 'pointer';
-        img.addEventListener('click', (e) => {
-          const main = document.getElementById('main-product-img');
-          if (main) main.src = e.currentTarget.src;
-        });
-      });
+    img.style.cursor = 'pointer';
+    img.addEventListener('click', (e) => {
+      const main = document.getElementById('main-product-img');
+      if (main) main.src = e.currentTarget.src;
+    });
+  });
     }
   }
+  
+    const elTab1 = document.getElementById("tab1");
+  if (product && product.tab1) {
+    elTab1.innerHTML = product.tab1;
+  } else {
+    elTab1.innerHTML = "<p>Không có mô tả cho sản phẩm này.</p>";
+  }
 </script>
+<script>// ...existing code...
 
+let thumbIndex = 0;
+const visibleThumbs = 5; // Số lượng thumbnail muốn hiển thị cùng lúc
+const totalThumbs = product.thumbs.length;
+const btnPrev = document.querySelector('.btn-prev');
+const btnNext = document.querySelector('.btn-next');
+function updateThumbsPosition() {
+  const slideWidth = slickTrack.querySelector('.slick-slide')?.offsetWidth || 80;
+  slickTrack.style.transform = `translateX(-${thumbIndex * (slideWidth + 8)}px)`;
+}
+
+// Nút prev
+if (btnPrev) {
+  btnPrev.addEventListener('click', () => {
+    if (thumbIndex > 0) {
+      thumbIndex--;
+      updateThumbsPosition();
+    }
+  });
+}
+// Nút next
+if (btnNext) {
+  btnNext.addEventListener('click', () => {
+    if (thumbIndex < totalThumbs - visibleThumbs) {
+      thumbIndex++;
+      updateThumbsPosition();
+    }
+  });
+}
+
+// Hiển thị thumb đầu tiên khi load
+updateThumbsPosition(); 
+
+// ...existing code...</script>
 
 
   </body>

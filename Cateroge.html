@@ -203,7 +203,9 @@
          <div class="mb-3">
         <label class="me-2">Xếp theo:</label>
         <input type="radio" name="sort" value="name-asc"> Tên A-Z
+        <input type="radio" name="sort" value="name-desc"> Tên Z-A
         <input type="radio" name="sort" value="price-asc"> Giá thấp đến cao
+        <input type="radio" name="sort" value="price-desc"> Giá cao đến thấp
       </div>
           <div class="row" id="cateroge-products"></div>
        </div>
@@ -418,6 +420,7 @@
     </div>
     </section>
     <!-- Bootstrap JavaScript Libraries -->
+     <script src="./products.js"></script>
     <script
       src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
       integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"
@@ -429,38 +432,71 @@
       integrity="sha384-BBtl+eGJRgqQAUMxJ7pMwbEyER4l1g+O15P+16Ep7Q9Q+zqX6gSbd85u4mG4QzX+"
       crossorigin="anonymous"
     ></script>
+    <script src="./products.js"></script>
 <script>
-  document.querySelectorAll('.custom-card').forEach(function(card) {
-    const mainImg = card.querySelector('.main-img');
-    const thumbnails = card.querySelectorAll('.thumb');
+document.addEventListener("DOMContentLoaded", function() {
+  // Lấy type từ URL, ví dụ: Cateroge.html?type=oxford
+  const params = new URLSearchParams(window.location.search);
+  const type = params.get("type");
 
-    let index = 0;
-    let interval;
+  // Gộp tất cả sản phẩm từ các biến global
+  const allProducts = [
+    ...(window.newArrivalProducts || []),
+    ...(window.oxfordProducts || []),
+    ...(window.loaferProducts || []),
+    ...(window.derbyProducts || [])
+  ];
 
-    // Hover vào card: tự động chuyển ảnh
-    card.addEventListener('mouseenter', () => {
-      interval = setInterval(() => {
-        index = (index + 1) % thumbnails.length;
-        mainImg.src = thumbnails[index].src;
-      }, 1000);
-    });
+  // Lọc sản phẩm theo type (category)
+  let filtered = allProducts;
+  if (type) {
+    filtered = allProducts.filter(p => (p.category || '').toLowerCase() === type.toLowerCase());
+  }
 
-    // Rời chuột: dừng và reset ảnh đầu tiên
-    card.addEventListener('mouseleave', () => {
-      clearInterval(interval);
-      index = 0;
-      mainImg.src = thumbnails[0].src;
-    });
+  // Render sản phẩm ra #cateroge-products
+  const container = document.getElementById('cateroge-products');
+  // ...existing code...
+if (container) {
+  container.innerHTML = filtered.map(product => {
+    const thumbsHTML = (product.thumbs || []).map(
+      thumb => `<img src="${thumb}" class="thumb me-1" style="width:32px;height:32px;object-fit:cover;cursor:pointer;">`
+    ).join('');
+     const tab1 = product.tab1 || "<p>Đang cập nhật mô tả sản phẩm...</p>";
+    // Tab2, Tab3 là nội dung chung
+    const tab2 = `<p>Chính sách đổi trả: Đổi trả trong 7 ngày nếu sản phẩm lỗi do nhà sản xuất.</p>`;
+    const tab3 = `<p>Bảo hành: Bảo hành 12 tháng cho mọi sản phẩm Be Classy.</p>`;
 
-    // Click vào ảnh nhỏ => đổi ảnh chính
-    thumbnails.forEach((thumb, i) => {
-      thumb.addEventListener('click', () => {
-        clearInterval(interval); // dừng auto chuyển
-        index = i;
-        mainImg.src = thumb.src;
-      });
-    });
-  });
+return `
+  <div class="col-md-4 mb-4">
+    <div class="card custom-card position-relative h-100">
+      <span class="position-absolute top-0 end-0 bg-danger text-white px-2 py-1 small">${product.discount || ''}</span>
+      <img src="${product.mainImg}" class="card-img-top main-img" alt="${product.title}" />
+      <div class="card-body position-relative text-center d-flex flex-column justify-content-end">
+        <div class="d-flex justify-content-center gap-2 mb-2 thumbnails flex-wrap">
+          ${thumbsHTML}
+        </div>
+        <div>
+          <div class="small product-title mb-1">${product.category || ''}</div>
+          <div class="card-title-seriese product-subtitle mb-1 fw-bold">${product.title || ''}</div>
+          <div class="price-info mb-2">
+            <span class="text-danger fw-bold me-2">${product.priceNew || ''}</span>
+            <span class="text-muted text-decoration-line-through">${product.priceOld || ''}</span>
+          </div>
+          <a href="producRetail.html?id=${product.id}" class="btn btn-outline-dark w-100">Tùy chọn</a>
+          
+        </div>
+      </div>
+    </div>
+  </div>
+`;
+  }).join('');
+}
+// ...existing code...
+  // Gọi lại hiệu ứng hover nếu cần
+  if (typeof initHoverEffect === "function") {
+    initHoverEffect();
+  }
+});
 </script>
 
 
@@ -499,16 +535,84 @@
     });
   }
 
-  document.addEventListener("DOMContentLoaded", () => {
-    render(newArrivalProducts, "new-arrival-products");
-    render(oxfordProducts, "oxford-products");
-    render(loaferProducts, "loafer-products");
 
     // gọi hover cho tất cả card vừa render
-    initHoverEffect();
+  document.addEventListener("DOMContentLoaded", function() {
+    setTimeout(initHoverEffect, 100); 
   });
 </script>
 <script src="main.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.min.js"></script>
+   
+<script>
+
+  // Lọc sản phẩm /////////////////////////////////////////
+  const container = document.getElementById("cateroge-products");
+  const params = new URLSearchParams(window.location.search);
+  const category = params.get("category") || "all";
+
+  // lọc sản phẩm theo category
+  let productsToShow = (category === "all")
+    ? window.products
+    : window.products.filter(p => p.category === category);
+
+  // hàm chuẩn hóa giá (bỏ dấu . hoặc , và chữ đ)
+  function parsePrice(priceStr) {
+    return parseFloat(priceStr.replace(/[^\d]/g, "")) || 0;
+  }
+
+  // render sản phẩm
+function renderProducts(products) {
+  container.innerHTML = products.map(p => {
+    const thumbsHTML = (p.thumbs || []).map(src =>
+      `<img src="${src}" class="img-thumbnail" style="width:40px;height:40px;">`
+    ).join("");
+     return `
+
+      <div class="col-md-4 mb-3">
+        <div class="card custom-card position-relative">
+          <span class="position-absolute top-0 end-0 bg-danger text-white px-2 py-1 small">${p.discount}</span>
+          <img src="${p.mainImg}" class="card-img-top main-img" alt="${p.title}" />
+          <div class="card-body position-relative text-center">
+            <div class="d-flex justify-content-center gap-2 mb-2 thumbnails">
+              ${thumbsHTML}
+            </div>
+            <h7 class="small product-title">${p.category}</h7>
+            <h6 class="card-title-seriese product-subtitle">${p.title}</h6>
+            <p class="price-info">
+              <span class="text-danger fw-bold me-2">${p.priceNew}</span>
+              <span class="text-muted text-decoration-line-through">${p.priceOld}</span>
+            </p>
+          <a href="producRetail.html?id=${p.id}" class="btn btn-outline-dark w-100">Tùy chọn</a>
+          </div>
+        </div>
+      </div>
+      `;
+}).join("");
+  }
+
+  renderProducts(productsToShow);
+
+  // sự kiện sort
+  document.querySelectorAll("input[name=sort]").forEach(radio => {
+    radio.addEventListener("change", (e) => {
+      const value = e.target.value;
+      let sorted = [...productsToShow]; // copy mảng gốc
+
+      if (value === "name-asc") {
+        sorted.sort((a, b) => a.title.localeCompare(b.title));
+      } else if (value === "name-desc") {
+        sorted.sort((a, b) => b.title.localeCompare(a.title));
+      } else if (value === "price-asc") {
+        sorted.sort((a, b) => parsePrice(a.priceNew) - parsePrice(b.priceNew));
+      } else if (value === "price-desc") {
+        sorted.sort((a, b) => parsePrice(b.priceNew) - parsePrice(a.priceNew));
+      }
+
+      renderProducts(sorted);
+    });
+  });
+</script>
 
   </body>
 </html>
