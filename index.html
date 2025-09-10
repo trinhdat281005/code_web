@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <title>Title</title>
+     <title>Be Classsy</title>
     <!-- Required meta tags -->
     <meta charset="utf-8" />
     <meta
@@ -10,6 +10,8 @@
     />
 
     <!-- Bootstrap CSS v5.2.1 -->
+     <link rel="canonical" href="https://beclassy.vn/">
+     <link rel="icon" href="//bizweb.dktcdn.net/100/292/624/themes/758446/assets/favicon.png?1757148447407" type="image/x-icon">
     <link
       href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
       rel="stylesheet"
@@ -27,56 +29,65 @@
 
   <body>
     <!--  navbar -->
-    <div class="container border-bottom py-3 card-header">
+    <div class="container border-bottom py-3 card-header d-none d-lg-block">
       <div class="row align-items-center">
-        <div class="col-md-4 align-items-center">
-          <span class="text-uppercase fw-bold">Hotline:</span>
-          <a class="text-decoration-none text-dark text-uppercase fw-bold">0971797927</a>
+        <div class="  col-md-4 align-items-center">
+          <span class="  d-none d-lg-block text-uppercase fw-bold">Hotline: 0971797927</span>
+        
         </div>
         <div class="col-md-4">
-          <a href="">
+          <a class="navbar-brand mx-auto d-flex align-items-center" href="./index.html">
             <img
               src="//bizweb.dktcdn.net/100/292/624/themes/758446/assets/logo.png?1756437777517"
               data-lazyload="//bizweb.dktcdn.net/100/292/624/themes/758446/assets/logo.png?1756437777517"
-              alt="Be Classy - Giày Da Nam, Giày Tây Nam Sang Trọng"
-              class="img-responsive center-block"
+              alt="Be Classy - Giày Da Nam, Giày Tây Nam Sang Trọng" 
+              class="img-fluid logo-responsive "
             />
           </a>
         </div>
         <div class="col-md-4 ">
           <ul class="d-flex justify-content-end gap-3 list-unstyled m-0  ">
-					<li class="site-nav-item site-nav-account">
-						<a href="/account" title="Tài khoản" rel="nofollow">Tài khoản</a>
+					<li class=" d-none d-lg-flex site-nav-item site-nav-account ">
+						<a href=""  class=" text-decoration-none list-unstyled"title="Tài khoản" rel="nofollow">Tài khoản</a>
 						<ul>
 							
-							<li><a rel="nofollow" href="/account/login" title="Đăng nhập">Đăng nhập</a></li>
-							<li><a rel="nofollow" href="/account/register" title="Đăng ký">Đăng ký</a></li>
+							<li><a  class=" list-unstyled text-decoration-none" href="./Dangnhap.html" title="Đăng nhập">Đăng nhập</a></li>
+							<li><a class=" list-unstyled text-decoration-none" rel="nofollow" href="./DangKi.html" title="Đăng ký">Đăng ký</a></li>
 							
 						</ul>
 					</li>
 				
             <li class="list-unstyled mx-3">
-              <a class="text-decoration-none text-dark text-uppercase fw-bold mx-1" href="#">
-                Giỏ hàng
-                <i class="fa-solid fa-cart-shopping"></i>
+              <a class="   text-decoration-none text-dark text-uppercase fw-bold mx-1 position-relative" href="./card.html">
+                <span class="d-none d-lg-inline" >Giỏ hàng</span>
+                <i class="fa-solid fa-cart-shopping">
+            
+                </i>       <span id="cart-count" class="badge rounded-pill bg-danger position-absolute top-0 start-100 translate-middle">
+            2
+        </span>
               </a>
-
+ 
             </li>
             <li class="list-unstyled">
-              <a class="text-decoration-none text-dark " href="#"><i class="fa-solid fa-magnifying-glass"></i></a>
-            </li>
+    <a class="text-decoration-none text-dark search-icon-link" href="./search.html">
+        <i class="fa-solid fa-magnifying-glass search-icon"></i>
+    </a>
+</li>
           </ul>
         </div>
       </div>
     </div>
+    
     <!--  Menu -->
     <header>
+      <!------------------Thanh tìm kiếm ---------------------------->
+    
       <div class="container">
         <nav
-          class="navbar navbar-expand-lg border-bottom justify-content-between"
+          class="navbar navbar-expand-lg border-bottom justify-content-between "
         >
 
-          <div class="container-fluid d-flex justify-content-between">
+          <div class="container-fluid d-flex justify-content-between mobile-icons">
             <button
               class="navbar-toggler"
               type="button"
@@ -88,8 +99,32 @@
             >
               <span class="navbar-toggler-icon"></span>
             </button>
+             
+           
+              <a class="navbar-brand d-lg-none mx-auto d-flex align-items-center" href="./index.html">
+            <img
+              src="//bizweb.dktcdn.net/100/292/624/themes/758446/assets/logo.png?1756437777517"
+              data-lazyload="//bizweb.dktcdn.net/100/292/624/themes/758446/assets/logo.png?1756437777517"
+              alt="Be Classy - Giày Da Nam, Giày Tây Nam Sang Trọng" 
+              class="img-fluid logo-responsive "
+            />
+          </a>
+          <li class="list-unstyled mx-3 d-lg-none">
+              <a class="   text-decoration-none text-dark text-uppercase fw-bold mx-1 position-relative" href="./card.html">
+                <span class="d-none d-lg-inline" >Giỏ hàng</span>
+                <i class="fa-solid fa-cart-shopping">
+            
+                </i>       <span id="cart-count" class="badge rounded-pill bg-danger position-absolute top-0 start-100 translate-middle">
+            2
+        </span>
+              </a>
+ 
+            </li>
+            <li class=" d-lg-none list-unstyled">
+              <a class="text-decoration-none text-dark " href="#"><i class="fa-solid fa-magnifying-glass"></i></a>
+            </li>
             <div class="collapse navbar-collapse" id="navbarNavDropdown">
-              <ul class="navbar-nav d-flex justify-content-center gap-5">
+              <ul class="navbar-nav d-flex justify-content-center gap-lg-5 gap-3">
                 <li class="nav-item dropdown px-5 ">
                   <a
                     class="nav-link dropdown-toggle"
@@ -113,6 +148,7 @@
                     </li>
                   </ul>
                 </li>
+                
                 <li class="nav-item dropdown px-5">
                   <a
                     class="nav-link dropdown-toggle"
@@ -174,6 +210,12 @@
                 <li class="nav-item px-5">
                   <a class="nav-link" href="./Serices.html">SERVICES</a>
                 </li>
+                  <li class="nav-item d-lg-none">
+          <a class="nav-link" href="./Dangnhap.html">Đăng nhập</a>
+        </li>
+        <li class="nav-item d-lg-none">
+          <a class="nav-link" href="./DangKi.html">Đăng ký</a>
+        </li>
               </ul>
             </div>
           </div>
@@ -182,6 +224,22 @@
     </header>
   
     <main>
+            <!------------------------------------Thanh tìm kiếm ------------------>
+<div class="search-overlay-container">
+    <div class="search-overlay"></div>
+    <div class="search-form-box">
+        <form action="search.html" method="get" class="search-form">
+            <input type="text" name="query" placeholder="Bạn cần tìm gì hôm nay?" class="search-input">
+            <button type="submit" class="search-button">
+                <i class="fa-solid fa-magnifying-glass"></i>
+            </button>
+        </form>
+        <button class="close-search-btn">
+            <i class="fa-solid fa-xmark"></i>
+        </button>
+    </div>
+</div>
+  
       <!-----------------------------------NEW ARRIVALS--------------------------------------------->
       <section>
        <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel" data-bs-interval="2000"  data-bs-pause="false">
@@ -245,8 +303,8 @@
       </section>
       <section>
         <div class="container">
-          <div class="row section_blog">
-            <div class="col-md-3">
+          <div class="row section_blog"> 
+            <div class="col-6 col-md-3 mb-4">
               <div class="card border-0 ">
                 <a href="title.html?id=1" class="text-decoration-none">
                   <img
@@ -267,7 +325,7 @@
                 </a>
               </div>
             </div>
-            <div class="col-md-3">
+            <div class="col-6 col-md-3 mb-4">
               <div class="card border-0">
                 <a href="title.html?id=2" class="text-decoration-none">
                   <img
@@ -290,7 +348,7 @@
                 </a>
               </div>
             </div>
-            <div class="col-md-3">
+            <div class="col-6 col-md-3 mb-4">
               <div class="card border-0">
                 <a href="title.html?id=3" class="text-decoration-none">
                   <img
@@ -314,7 +372,7 @@
                 </a>
               </div>
             </div>
-            <div class="col-md-3">
+            <div class="col-6 col-md-3 mb-4">
               <div class="card border-0">
                 <a href="title.html?id=4" class="text-decoration-none">
                   <img
@@ -527,11 +585,7 @@
               </div>
             </div>
             <div class="row py-5">
-              <div class="col-md-12 d-flex justify-content-center">
-                <a href="" class="text-decoration-none text-dark"
-                  >Xem tất cả BAGS</a
-                >
-              </div>
+              
             </div>
           </div>
         </div>
@@ -809,8 +863,8 @@ function render(products, containerId) {
       .join("");
 
     container.innerHTML += `
-      <div class="col-md-3">
-        <div class="card custom-card position-relative">
+      <div class="col-6 col-md-3 mb-4">
+        <div class="card h-100 custom-card position-relative">
           <span class="position-absolute top-0 end-0 bg-danger text-white px-2 py-1 small">${p.discount}</span>
           <img src="${p.mainImg}" class="card-img-top main-img" alt="${p.title}" />
           <div class="card-body position-relative text-center">
@@ -885,6 +939,6 @@ render(window.oxfordProducts, "oxford-products");
     initHoverEffect();
   });
 </script>
-
+<script src="search-global-script copy.js"></script>
   </body>
 </html>

@@ -1,7 +1,6 @@
-
-window.newArrivalProducts =[
+window.newArrivalProducts = [
   {
-    id:1,
+    id: 1,
     mainImg: "img/OF02/den.webp",
     thumbs: [
       "img/OF02/vang.webp",
@@ -37,10 +36,10 @@ window.newArrivalProducts =[
 <p style="text-align: center;">Nét đơn giản và cổ điển được đan xen lẫn nhau trong thiết kế, cùng với những mảng da bò thật, tinh mới. Mọi thứ tạo nên một siêu phẩm của dòng Oxford cổ điển, giữ nguyên sự sang trọng và tinh tế của thời trang đã từng.</p>
 							
 						</div>
-    `
+    `,
   },
-    {
-    id:14,
+  {
+    id: 14,
     mainImg: "img/DB07/dscf3582.webp",
     thumbs: [
       "img/DB07/dscf3587.webp",
@@ -67,10 +66,10 @@ window.newArrivalProducts =[
 <p style="text-align: center;">&nbsp;</p>
 							
 						</div>
-    `
+    `,
   },
-   {
-    id:11,
+  {
+    id: 11,
     mainImg: "img/PF002/den.webp",
     thumbs: [
       "img/PF002/nau.webp",
@@ -79,7 +78,7 @@ window.newArrivalProducts =[
       "img/PF002/dscf8616.webp",
       "img/PF002/dscf8620.webp",
       "img/PF002/den.webp",
-    ],  
+    ],
     category: "NEW ARRIVAL",
     title: "OMW LOAFER - PF002",
     priceNew: "1.400.000đ",
@@ -97,10 +96,10 @@ window.newArrivalProducts =[
 <p><img data-thumb="original" original-height="8917" original-width="1026" src="//bizweb.dktcdn.net/100/292/624/files/pf002.jpg?v=1752047084969"></p>
 							
 						</div>
-    `
+    `,
   },
   {
-    id:12,
+    id: 12,
     mainImg: "img/SD01/den.webp",
     thumbs: [
       "img/SD01/nau.webp",
@@ -125,13 +124,13 @@ window.newArrivalProducts =[
 <p style="text-align: center;">Hai gam màu BLACK và BROWN giúp quý ông dễ dàng linh hoạt biến đổi phong cách dù ở đâu. Một đôi sandal da tiện dụng nhưng vẫn chuẩn mực thanh lịch cho những lúc cần thư giãn.</p>
 							
 						</div>
-    `
+    `,
   },
- ];
+];
 
- window.oxfordProducts = [
+window.oxfordProducts = [
   {
-    id:2,
+    id: 2,
     mainImg: "img/OF07/den.jpg",
     thumbs: [
       "img/OF07/den.jpg",
@@ -166,10 +165,10 @@ window.newArrivalProducts =[
 <p style="text-align: center;">Nét đơn giản và cổ điển được đan xen lẫn nhau trong thiết kế, cùng với những mảng da bò thật, tinh mới. Mọi thứ tạo nên một siêu phẩm của dòng Oxford cổ điển, giữ nguyên sự sang trọng và tinh tế của thời trang đã từng.</p>
 							
 						</div>
-    `
+    `,
   },
   {
-     id:3,
+    id: 3,
 
     mainImg: "img/OF02/den.webp",
     thumbs: [
@@ -206,11 +205,11 @@ window.newArrivalProducts =[
 <p style="text-align: center;">Nét đơn giản và cổ điển được đan xen lẫn nhau trong thiết kế, cùng với những mảng da bò thật, tinh mới. Mọi thứ tạo nên một siêu phẩm của dòng Oxford cổ điển, giữ nguyên sự sang trọng và tinh tế của thời trang đã từng.</p>
 							
 						</div>
-    `
+    `,
   },
 
-   {
-     id:4,
+  {
+    id: 4,
     mainImg: "img/OF32/DEN.webp",
     thumbs: [
       "img/OF32/NAU.webp",
@@ -236,10 +235,10 @@ window.newArrivalProducts =[
 <p style="text-align: center;"><img data-thumb="original" original-height="8917" original-width="1026" src="//bizweb.dktcdn.net/100/292/624/files/of32-d196d119-20b5-40ba-a4d5-8a257f6325c4.jpg?v=1717042026622"></p>
 							
 						</div>
-    `
+    `,
   },
-   {
-     id:5,
+  {
+    id: 5,
     mainImg: "img/OF_TCC08/den.webp",
     thumbs: [
       "img/OF_TCC08/nau.webp",
@@ -266,13 +265,13 @@ window.newArrivalProducts =[
 <p style="text-align: center;"><img data-thumb="original" original-height="8917" original-width="1026" src="//bizweb.dktcdn.net/100/292/624/files/tcc08-2.jpg?v=1747802374313"></p>
 							
 						</div>
-    `
+    `,
   },
 ];
 
- window.loaferProducts = [
+window.loaferProducts = [
   {
-     id:6,
+    id: 6,
     mainImg: "./img/LF20/dscf1271.webp",
     thumbs: [
       "./img/LF20/dscf1271.webp",
@@ -281,7 +280,6 @@ window.newArrivalProducts =[
       "img/LF20/dscf1276-2-bf1fe9ea-6ae0-4fd8-b777-11700f6b6f9a.webp",
       "img/LF20/dscf1280.webp",
       "img/LF20/dscf1283.webp",
-
     ],
     category: "LOAFER",
     title: "ALBI LOAFER - LF20",
@@ -300,10 +298,10 @@ window.newArrivalProducts =[
 <p><img data-thumb="original" original-height="8917" original-width="1026" src="//bizweb.dktcdn.net/100/292/624/files/lf20.jpg?v=1737089620938"></p>
 							
 						</div>
-    `
+    `,
   },
   {
-     id:7,
+    id: 7,
     mainImg: "./img/LF18M/dscf1803.webp",
     thumbs: [
       "./img/LF18M/dscf1803.webp",
@@ -330,10 +328,10 @@ window.newArrivalProducts =[
 <p style="text-align: center;"><img data-thumb="original" original-height="8917" original-width="1026" src="//bizweb.dktcdn.net/100/292/624/files/lf18m.jpg?v=1742380529627"></p>
 							
 						</div>
-    `
+    `,
   },
-    {
-         id:8,
+  {
+    id: 8,
     mainImg: "img/LF-PF002/dscf8596.webp",
     thumbs: [
       "img/LF-PF002/dscf8596.webp",
@@ -361,11 +359,10 @@ window.newArrivalProducts =[
 <p><img data-thumb="original" original-height="8917" original-width="1026" src="//bizweb.dktcdn.net/100/292/624/files/pf002.jpg?v=1752047084969"></p>
 							
 						</div>
-    `
-    
+    `,
   },
-    {
-         id:9,
+  {
+    id: 9,
     mainImg: "img/PF004/dscf0096.webp",
     thumbs: [
       "img/PF004/dscf0107-2.webp",
@@ -392,10 +389,10 @@ window.newArrivalProducts =[
 <p style="text-align: center;"><img data-thumb="original" original-height="8767" original-width="1026" src="//bizweb.dktcdn.net/100/292/624/files/pf004-2-5301024f-bba3-4645-9dbd-03c03a900c83.jpg?v=1752547714882"></p>
 							
 						</div>
-    `
+    `,
   },
-      {
-         id:10,
+  {
+    id: 10,
     mainImg: "img/LFF04/dscf8891.webp",
     thumbs: [
       "img/LFF04/dscf8895.webp",
@@ -424,13 +421,13 @@ window.newArrivalProducts =[
 							
 				
 					
-    `
+    `,
   },
 ];
 
- window.derbyProducts =[
+window.derbyProducts = [
   {
-     id:17,
+    id: 17,
     mainImg: "img/DB07/dscf1507.webp",
     thumbs: [
       "img/DB07/dscf1507.webp",
@@ -457,10 +454,10 @@ window.newArrivalProducts =[
 <p style="text-align: center;">&nbsp;</p>
 							
 						</div>
-    `
+    `,
   },
-    {
-         id:18,
+  {
+    id: 18,
     mainImg: "img/DB14/dscf8725.webp",
     thumbs: [
       "img/DB14/dscf8725.webp",
@@ -495,10 +492,10 @@ window.newArrivalProducts =[
 <p style="text-align: center;">Sản phẩm giày tây Be Classy được làm từ da bò Ý, Lót trong da bò mộc, đế được khâu cấu trúc McKay.</p>
 							
 						</div>
-    `
+    `,
   },
-    {
-         id:19,
+  {
+    id: 19,
     mainImg: "img/DB24/dscf8708.webp",
     thumbs: [
       "img/DB24/dscf8708.webp",
@@ -524,10 +521,10 @@ window.newArrivalProducts =[
 <p><img data-thumb="original" original-height="8917" original-width="1026" src="//bizweb.dktcdn.net/100/292/624/files/db24-8beb5e35-7a78-4ffd-b00a-bd0f77d3ea84.jpg?v=1749455052786"></p>
 							
 						</div>
-    `
+    `,
   },
-    {
-         id:20,
+  {
+    id: 20,
     mainImg: "img/DB34/DEN.webp",
     thumbs: [
       "img/DB34/DEN.webp",
@@ -554,19 +551,15 @@ window.newArrivalProducts =[
 <p style="text-align: center;"><img data-thumb="original" original-height="8917" original-width="1026" src="//bizweb.dktcdn.net/100/292/624/files/db34-fd576e77-9308-460e-ae0f-63a13a2a5a17.jpg?v=1749455236192"></p>
 							
 						</div>
-    `
+    `,
   },
 ];
-
-
-
-
 
 // ...existing code...
 window.products = [
   ...(window.newArrivalProducts || []),
   ...(window.oxfordProducts || []),
   ...(window.loaferProducts || []),
-  ...(window.derbyProducts || [])
+  ...(window.derbyProducts || []),
 ];
 // ...existing code...

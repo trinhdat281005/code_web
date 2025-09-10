@@ -22,54 +22,70 @@
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
       rel="stylesheet"
     />
-
+<link rel="icon" href="//bizweb.dktcdn.net/100/292/624/themes/758446/assets/favicon.png?1757148447407" type="image/x-icon">
   </head>
 
   <body>
     
-    <!--  navbar -->
-    <div class="container border-bottom py-3 card-header">
+   <div class="container border-bottom py-3 card-header d-none d-lg-block">
       <div class="row align-items-center">
-        <div class="col-md-4 align-items-center">
-          <span class="text-uppercase fw-bold">Hotline:</span>
-          <a class="text-decoration-none text-dark text-uppercase fw-bold">0971797927</a>
+        <div class="  col-md-4 align-items-center">
+          <span class="  d-none d-lg-block text-uppercase fw-bold">Hotline: 0971797927</span>
+        
         </div>
         <div class="col-md-4">
-          <a href="index.html">
+          <a class="navbar-brand mx-auto d-flex align-items-center" href="./index.html">
             <img
               src="//bizweb.dktcdn.net/100/292/624/themes/758446/assets/logo.png?1756437777517"
               data-lazyload="//bizweb.dktcdn.net/100/292/624/themes/758446/assets/logo.png?1756437777517"
-              alt="Be Classy - Giày Da Nam, Giày Tây Nam Sang Trọng"
-              class="img-responsive center-block"
+              alt="Be Classy - Giày Da Nam, Giày Tây Nam Sang Trọng" 
+              class="img-fluid logo-responsive "
             />
           </a>
         </div>
         <div class="col-md-4 ">
           <ul class="d-flex justify-content-end gap-3 list-unstyled m-0  ">
-            <li class="list-unstyled mx-3">
-              <a class="text-decoration-none text-dark text-uppercase fw-bold" href="#">Tài khoản </a>
-            </li>
-            <li class="list-unstyled mx-3">
-              <a class="text-decoration-none text-dark text-uppercase fw-bold mx-1" href="#">
-                Giỏ hàng
-                <i class="fa-solid fa-cart-shopping"></i>
+					<li class=" d-none d-lg-flex site-nav-item site-nav-account ">
+						<a href=""  class=" text-decoration-none list-unstyled"title="Tài khoản" rel="nofollow">Tài khoản</a>
+						<ul>
+							
+							<li><a  class=" list-unstyled text-decoration-none" href="./Dangnhap.html" title="Đăng nhập">Đăng nhập</a></li>
+							<li><a class=" list-unstyled text-decoration-none" rel="nofollow" href="./DangKi.html" title="Đăng ký">Đăng ký</a></li>
+							
+						</ul>
+					</li>
+				
+           <li class="list-unstyled mx-3">
+              <a class="   text-decoration-none text-dark text-uppercase fw-bold mx-1 position-relative" href="./card.html">
+                <span class="d-none d-lg-inline" >Giỏ hàng</span>
+                <i class="fa-solid fa-cart-shopping">
+            
+                </i>       <span id="cart-count" class="badge rounded-pill bg-danger position-absolute top-0 start-100 translate-middle">
+            2
+        </span>
               </a>
-
+ 
             </li>
             <li class="list-unstyled">
-              <a class="text-decoration-none text-dark " href="#"><i class="fa-solid fa-magnifying-glass"></i></a>
-            </li>
+    <a class="text-decoration-none text-dark search-icon-link" href="./search.html">
+        <i class="fa-solid fa-magnifying-glass search-icon"></i>
+    </a>
+</li>
           </ul>
         </div>
       </div>
     </div>
-      <header>
+    
+    <!--  Menu -->
+    <header>
+      <!------------------Thanh tìm kiếm ---------------------------->
+    
       <div class="container">
         <nav
-          class="navbar navbar-expand-lg border-bottom justify-content-between"
+          class="navbar navbar-expand-lg border-bottom justify-content-between "
         >
 
-          <div class="container-fluid d-flex justify-content-between">
+          <div class="container-fluid d-flex justify-content-between mobile-icons">
             <button
               class="navbar-toggler"
               type="button"
@@ -81,8 +97,32 @@
             >
               <span class="navbar-toggler-icon"></span>
             </button>
+             
+           
+              <a class="navbar-brand d-lg-none mx-auto d-flex align-items-center" href="./index.html">
+            <img
+              src="//bizweb.dktcdn.net/100/292/624/themes/758446/assets/logo.png?1756437777517"
+              data-lazyload="//bizweb.dktcdn.net/100/292/624/themes/758446/assets/logo.png?1756437777517"
+              alt="Be Classy - Giày Da Nam, Giày Tây Nam Sang Trọng" 
+              class="img-fluid logo-responsive "
+            />
+          </a>
+           <li class="list-unstyled mx-3 d-lg-none">
+              <a class="   text-decoration-none text-dark text-uppercase fw-bold mx-1 position-relative" href="./card.html">
+                <span class="d-none d-lg-inline" >Giỏ hàng</span>
+                <i class="fa-solid fa-cart-shopping">
+            
+                </i>       <span id="cart-count" class="badge rounded-pill bg-danger position-absolute top-0 start-100 translate-middle">
+            2
+        </span>
+              </a>
+ 
+            </li>
+            <li class=" d-lg-none list-unstyled">
+              <a class="text-decoration-none text-dark " href="#"><i class="fa-solid fa-magnifying-glass"></i></a>
+            </li>
             <div class="collapse navbar-collapse" id="navbarNavDropdown">
-              <ul class="navbar-nav d-flex justify-content-center gap-5">
+              <ul class="navbar-nav d-flex justify-content-center gap-lg-5 gap-3">
                 <li class="nav-item dropdown px-5 ">
                   <a
                     class="nav-link dropdown-toggle"
@@ -106,6 +146,7 @@
                     </li>
                   </ul>
                 </li>
+                
                 <li class="nav-item dropdown px-5">
                   <a
                     class="nav-link dropdown-toggle"
@@ -162,18 +203,38 @@
                   </ul>
                 </li>
                 <li class="nav-item px-5">
-                  <a class="nav-link" href="./Stores.html">STORES</a>
+                  <a class="nav-link" href="Stores.html">STORES</a>
                 </li>
                 <li class="nav-item px-5">
                   <a class="nav-link" href="./Serices.html">SERVICES</a>
                 </li>
+                  <li class="nav-item d-lg-none">
+          <a class="nav-link" href="./Dangnhap.html">Đăng nhập</a>
+        </li>
+        <li class="nav-item d-lg-none">
+          <a class="nav-link" href="./DangKi.html">Đăng ký</a>
+        </li>
               </ul>
             </div>
           </div>
         </nav>
       </div>
     </header>
-  
+    <!------------------------------------Thanh tìm kiếm ------------------>
+<div class="search-overlay-container">
+    <div class="search-overlay"></div>
+    <div class="search-form-box">
+        <form action="search.html" method="get" class="search-form">
+            <input type="text" name="query" placeholder="Bạn cần tìm gì hôm nay?" class="search-input">
+            <button type="submit" class="search-button">
+                <i class="fa-solid fa-magnifying-glass"></i>
+            </button>
+        </form>
+        <button class="close-search-btn">
+            <i class="fa-solid fa-xmark"></i>
+        </button>
+    </div>
+</div>
 <div class="container">
   <nav style="--bs-breadcrumb-divider: '>';" aria-label="breadcrumb">
   <ol class="breadcrumb">
@@ -523,5 +584,6 @@ Be Classy là một trong những thương hiệu giày da có xưởng sản xu
   document.querySelector(".article-details").innerHTML = article.content;
   document.querySelector("#breadcrumb-title").innerText = article.title;
 </script>
+<script src="search-global-script copy.js"></script>
   </body>
 </html>

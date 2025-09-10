@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <title>Title</title>
+    <title>Be Classsy</title>
     <!-- Required meta tags -->
     <meta charset="utf-8" />
     <meta
@@ -22,53 +22,70 @@
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
       rel="stylesheet"
     />
+    <link rel="icon" href="//bizweb.dktcdn.net/100/292/624/themes/758446/assets/favicon.png?1757148447407" type="image/x-icon">
   </head>
 
   <body>
     <!--  navbar -->
-    <div class="container border-bottom py-3 card-header">
+     <div class="container border-bottom py-3 card-header d-none d-lg-block">
       <div class="row align-items-center">
-        <div class="col-md-4 align-items-center">
-          <span class="text-uppercase fw-bold">Hotline:</span>
-          <a class="text-decoration-none text-dark text-uppercase fw-bold">0971797927</a>
+        <div class="  col-md-4 align-items-center">
+          <span class="  d-none d-lg-block text-uppercase fw-bold">Hotline: 0971797927</span>
+        
         </div>
         <div class="col-md-4">
-          <a href="index.html">
+          <a class="navbar-brand mx-auto d-flex align-items-center" href="./index.html">
             <img
               src="//bizweb.dktcdn.net/100/292/624/themes/758446/assets/logo.png?1756437777517"
               data-lazyload="//bizweb.dktcdn.net/100/292/624/themes/758446/assets/logo.png?1756437777517"
-              alt="Be Classy - Giày Da Nam, Giày Tây Nam Sang Trọng"
-              class="img-responsive center-block"
+              alt="Be Classy - Giày Da Nam, Giày Tây Nam Sang Trọng" 
+              class="img-fluid logo-responsive "
             />
           </a>
         </div>
         <div class="col-md-4 ">
           <ul class="d-flex justify-content-end gap-3 list-unstyled m-0  ">
-            <li class="list-unstyled mx-3">
-              <a class="text-decoration-none text-dark text-uppercase fw-bold" href="#">Tài khoản </a>
-            </li>
-            <li class="list-unstyled mx-3">
-              <a class="text-decoration-none text-dark text-uppercase fw-bold mx-1" href="#">
-                Giỏ hàng
-                <i class="fa-solid fa-cart-shopping"></i>
+					<li class=" d-none d-lg-flex site-nav-item site-nav-account ">
+						<a href=""  class=" text-decoration-none list-unstyled"title="Tài khoản" rel="nofollow">Tài khoản</a>
+						<ul>
+							
+							<li><a  class=" list-unstyled text-decoration-none" href="./Dangnhap.html" title="Đăng nhập">Đăng nhập</a></li>
+							<li><a class=" list-unstyled text-decoration-none" rel="nofollow" href="./DangKi.html" title="Đăng ký">Đăng ký</a></li>
+							
+						</ul>
+					</li>
+				
+          <li class="list-unstyled mx-3">
+              <a class="   text-decoration-none text-dark text-uppercase fw-bold mx-1 position-relative" href="./card.html">
+                <span class="d-none d-lg-inline" >Giỏ hàng</span>
+                <i class="fa-solid fa-cart-shopping">
+            
+                </i>       <span id="cart-count" class="badge rounded-pill bg-danger position-absolute top-0 start-100 translate-middle">
+            2
+        </span>
               </a>
-
+ 
             </li>
             <li class="list-unstyled">
-              <a class="text-decoration-none text-dark " href="#"><i class="fa-solid fa-magnifying-glass"></i></a>
-            </li>
+    <a class="text-decoration-none text-dark search-icon-link" href="./search.html">
+        <i class="fa-solid fa-magnifying-glass search-icon"></i>
+    </a>
+</li>
           </ul>
         </div>
       </div>
     </div>
+    
     <!--  Menu -->
     <header>
+      <!------------------Thanh tìm kiếm ---------------------------->
+    
       <div class="container">
         <nav
-          class="navbar navbar-expand-lg border-bottom justify-content-between"
+          class="navbar navbar-expand-lg border-bottom justify-content-between "
         >
 
-          <div class="container-fluid d-flex justify-content-between">
+          <div class="container-fluid d-flex justify-content-between mobile-icons">
             <button
               class="navbar-toggler"
               type="button"
@@ -80,8 +97,32 @@
             >
               <span class="navbar-toggler-icon"></span>
             </button>
+             
+           
+              <a class="navbar-brand d-lg-none mx-auto d-flex align-items-center" href="./index.html">
+            <img
+              src="//bizweb.dktcdn.net/100/292/624/themes/758446/assets/logo.png?1756437777517"
+              data-lazyload="//bizweb.dktcdn.net/100/292/624/themes/758446/assets/logo.png?1756437777517"
+              alt="Be Classy - Giày Da Nam, Giày Tây Nam Sang Trọng" 
+              class="img-fluid logo-responsive "
+            />
+          </a>
+            <li class="list-unstyled mx-3 d-lg-none">
+              <a class="   text-decoration-none text-dark text-uppercase fw-bold mx-1 position-relative" href="./card.html">
+                <span class="d-none d-lg-inline" >Giỏ hàng</span>
+                <i class="fa-solid fa-cart-shopping">
+            
+                </i>       <span id="cart-count" class="badge rounded-pill bg-danger position-absolute top-0 start-100 translate-middle">
+            2
+        </span>
+              </a>
+ 
+            </li>
+            <li class=" d-lg-none list-unstyled">
+              <a class="text-decoration-none text-dark " href="#"><i class="fa-solid fa-magnifying-glass"></i></a>
+            </li>
             <div class="collapse navbar-collapse" id="navbarNavDropdown">
-              <ul class="navbar-nav d-flex justify-content-center gap-5">
+              <ul class="navbar-nav d-flex justify-content-center gap-lg-5 gap-3">
                 <li class="nav-item dropdown px-5 ">
                   <a
                     class="nav-link dropdown-toggle"
@@ -93,18 +134,19 @@
                     DRESS SHOES
                   </a>
                   <ul class="dropdown-menu">
-                    <li><a class="dropdown-item" href="#">OXFORD</a></li>
+                    <li><a class="dropdown-item" href="Cateroge.html?type=oxford">OXFORD</a></li>
                     <li>
-                      <a class="dropdown-item" href="#">LOAFER</a>
+                      <a class="dropdown-item" href="Cateroge.html?type=loafer">LOAFER</a>
                     </li>
                     <li>
-                      <a class="dropdown-item" href="#">DERBY</a>
+                      <a class="dropdown-item" href="Cateroge.html?type=derby">DERBY</a>
                     </li>
                     <li>
                       <a class="dropdown-item" href="#">BOOTS</a>
                     </li>
                   </ul>
                 </li>
+                
                 <li class="nav-item dropdown px-5">
                   <a
                     class="nav-link dropdown-toggle"
@@ -161,11 +203,17 @@
                   </ul>
                 </li>
                 <li class="nav-item px-5">
-                  <a class="nav-link" href="#">STORES</a>
+                  <a class="nav-link" href="Stores.html">STORES</a>
                 </li>
                 <li class="nav-item px-5">
                   <a class="nav-link" href="./Serices.html">SERVICES</a>
                 </li>
+                  <li class="nav-item d-lg-none">
+          <a class="nav-link" href="./Dangnhap.html">Đăng nhập</a>
+        </li>
+        <li class="nav-item d-lg-none">
+          <a class="nav-link" href="./DangKi.html">Đăng ký</a>
+        </li>
               </ul>
             </div>
           </div>
@@ -174,7 +222,21 @@
     </header>
   
    <Main>
-    
+      <!------------------------------------Thanh tìm kiếm ------------------>
+<div class="search-overlay-container">
+    <div class="search-overlay"></div>
+    <div class="search-form-box">
+        <form action="search.html" method="get" class="search-form">
+            <input type="text" name="query" placeholder="Bạn cần tìm gì hôm nay?" class="search-input">
+            <button type="submit" class="search-button">
+                <i class="fa-solid fa-magnifying-glass"></i>
+            </button>
+        </form>
+        <button class="close-search-btn">
+            <i class="fa-solid fa-xmark"></i>
+        </button>
+    </div>
+</div>
   <section class="product-cart">
     <div class="container"> 
       <div class="row">
@@ -219,29 +281,29 @@
       <div class="row">
          <div class="select_color col-md-12  mb-3">
         <div class="label_coler">Màu sắc: </div>
-        <div class="color_black">
+        <div class="color_black ">
           <input data-value="black" class="variant-0" id="swatch-0-black" type="radio" name="option1" value="BLACK" checked="">
           <label for="swatch-0-black">
-            <img src="./img/OF02/dscf0272.webp" alt="">
+           
             <span>Black</span>
             <img class="crossed-out" src="//bizweb.dktcdn.net/100/292/624/themes/758446/assets/soldout.png?1756910536530" alt="BLACK">
             <img class="img-check" src="//bizweb.dktcdn.net/100/292/624/themes/758446/assets/select-pro.png?1756910536530" alt="BLACK">
           </label>
         </div>
           <div class="color_black">
-          <input data-value="black" class="variant-0" id="swatch-0-black" type="radio" name="option1" value="BLACK" checked="">
-          <label for="swatch-0-black">
-            <img src="./img/OF02/dscf0272.webp" alt="">
-            <span>Black</span>
+          <input data-value="black" class="variant-0" id="swatch-0-brown" type="radio" name="option1" value="brown" checked="">
+          <label for="swatch-0-brown">
+          
+            <span>BROWN</span>
             <img class="crossed-out" src="//bizweb.dktcdn.net/100/292/624/themes/758446/assets/soldout.png?1756910536530" alt="BLACK">
             <img class="img-check" src="//bizweb.dktcdn.net/100/292/624/themes/758446/assets/select-pro.png?1756910536530" alt="BLACK">
           </label>
         </div>
           <div class="color_black">
-          <input data-value="black" class="variant-0" id="swatch-0-black" type="radio" name="option1" value="BLACK" checked="">
-          <label for="swatch-0-black">
-            <img src="./img/OF02/dscf0272.webp" alt="">
-            <span>Black</span>
+          <input data-value="black" class="variant-0" id="swatch-0-l-brown" type="radio" name="option1" value="l-brown" checked="">
+          <label for="swatch-0-l-brown">
+         
+            <span>L-BROWN</span>
             <img class="crossed-out" src="//bizweb.dktcdn.net/100/292/624/themes/758446/assets/soldout.png?1756910536530" alt="BLACK">
             <img class="img-check" src="//bizweb.dktcdn.net/100/292/624/themes/758446/assets/select-pro.png?1756910536530" alt="BLACK">
           </label>
@@ -319,11 +381,15 @@
 									<button onclick="var result = document.getElementById('qty'); var qty = result.value; if( !isNaN(qty)) result.value++;return false;" class="btn-plus btn-cts" type="button">+</button>
 								</div>
 							</div>
-							<div class="btn-mua">
-																	
-								<button type="submit" data-role="addtocart" class="btn btn-lg btn-gray btn-cart btn_buy add_to_cart"><span class="txt-main">Mua ngay với giá <b class="product-price">1.400.000₫</b></span><span class="text-add">Đặt mua giao hàng tận nơi</span></button>
-								
-							</div>
+						  <div class="btn-mua">
+    <button type="button" 
+            class="btn btn-lg btn-gray btn-cart btn_buy add_to_cart">
+      <span class="txt-main">Mua ngay với giá 
+        <b class="product-price">1.400.000₫</b>
+      </span>
+      <span class="text-add">Đặt mua giao hàng tận nơi</span>
+    </button>
+  </div>
 						</div>
       </div>
          </form>
@@ -362,9 +428,9 @@
       </div>
       
       </div>
-    <ul class="nav nav btn-dark nav-pills mt-4" id="productTab" role="tablist">
+    <ul class="nav nav btn-dark nav-pills mt-4 px-5" id="productTab" role="tablist">
       <li class="nav_item" role="presentation">
-        <button class="nav_link bg-light 
+        <button class="nav-link bg-light 
           text-black" id="tab1-tab" data-bs-toggle="tab" data-bs-target="#tab1" type="button" role="tab">MÔ TẢ SẢN PHẨM</button>
       </li>
       <li class="nav-item" role="presentation">
@@ -377,12 +443,12 @@
 
 <div class="tab-content p-3  border-bottom">
 
-  <div id="tab1" class="tab-sp active">
+  <div id="tab1" class="tab-sp tab-pane fade show active">
    <!-- Nội dung Tab 1 sẽ render bằng JS -->
   </div>
 
 
-  <div id="tab2" class="tab-sale">
+  <div id="tab2" class="tab-sale tab-pane fade">
     <p style="text-align:center;">
       <img src="//bizweb.dktcdn.net/100/292/624/files/desktop-9-d4a50b3a-1d63-44c7-967c-babe88841d06.jpg?v=1684296767506">
     </p>
@@ -390,7 +456,7 @@
   </div>
 
 
-  <div id="tab3" class="tab-size">
+  <div id="tab3" class="tab-size tab-pane fade">
    <div class="rte">
 							<h1 dir="ltr"><strong><span style="font-size:16px;">Bàn chân của các Quý Ông Việt có bề ngang to hơn so với các nước châu Âu, vì thế Size giày Tây cũng có sự khác biệt. Đồng thời, sự vừa vặn của một đôi giày chính là điểm then chốt làm tăng độ tự tin của bản thân.</span></strong></h1>
 <p dir="ltr">Để các Quý Ông chọn được đôi giày Tây vừa vặn và ưng ý nhất. Be Classy gửi đến các Quý Ông cách đo chân và chọn Size chuẩn cho mình!</p>
@@ -641,104 +707,135 @@
   
 
   <script>
-
-  // Lấy id từ url
+  // Lấy id từ URL
   const params = new URLSearchParams(window.location.search);
   const id = parseInt(params.get("id"), 10);
 
-  // Nếu bạn đã merge products trong products.js, biến products là global
+  // Kiểm tra xem biến products đã được định nghĩa chưa
   if (!window.products) {
-    console.error('products is not defined. Hãy chắc products.js đã được include và đã merge các mảng thành `products`.');
+    console.error('products is not defined. Hãy chắc chắn đã nhúng products.js và đã merge các mảng thành `products`.');
   }
 
+  // Tìm sản phẩm trong mảng products
   const product = window.products && window.products.find(p => p.id === id);
 
-  // Các element targe sẵn có trong HTML của bạn
+  // Lấy các element trên trang
   const elName = document.getElementById('product-name');
   const elPriceNew = document.getElementById('product-price-new');
   const elPriceOld = document.getElementById('product-price-old');
   const elDiscount = document.getElementById('product-discount');
   const elImages = document.getElementById('product-images');
-
-  // slider track trong HTML (nếu bạn muốn cập nhật thumbnails)
+  const elAddToCartBtn = document.querySelector(".add_to_cart");
   const slickTrack = document.querySelector('.slick-track');
+  const elTab1 = document.getElementById("tab1");
 
   if (!product) {
-    // Nếu không có product, show thông báo
+    // Nếu không tìm thấy sản phẩm, hiển thị thông báo
     const container = document.createElement('div');
     container.innerHTML = '<p>Sản phẩm không tồn tại</p>';
     document.body.prepend(container);
   } else {
-    // Gán text
+    // Nếu tìm thấy sản phẩm, tiến hành render dữ liệu
     if (elName) elName.textContent = product.title;
     if (elPriceNew) elPriceNew.textContent = product.priceNew;
     if (elPriceOld) elPriceOld.textContent = product.priceOld;
     if (elDiscount) elDiscount.textContent = product.discount;
 
-    // Hiển thị ảnh chính
+    // Hiển thị ảnh chính bằng cách sử dụng id duy nhất
     if (elImages) {
       elImages.innerHTML = `<img id="main-product-img" src="${product.mainImg}" class="img-fluid" alt="${product.title}">`;
     }
 
-    // Render thumbnails vào slider (nếu tồn tại)
+    // Render thumbnails và gán sự kiện click
     if (slickTrack) {
       slickTrack.innerHTML = product.thumbs.map((src, idx) => {
         return `<div class="fixs slick-slide" data-idx="${idx}"><img src="${src}" alt="${product.title} thumb ${idx}"></div>`;
       }).join('');
-      // gắn sự kiện click cho thumbnails để thay ảnh chính
+      
       slickTrack.querySelectorAll('.fixs img').forEach(img => {
-    img.style.cursor = 'pointer';
-    img.addEventListener('click', (e) => {
-      const main = document.getElementById('main-product-img');
-      if (main) main.src = e.currentTarget.src;
-    });
-  });
+        img.style.cursor = 'pointer';
+        img.addEventListener('click', (e) => {
+          const main = document.getElementById('main-product-img');
+          if (main) main.src = e.currentTarget.src;
+        });
+      });
     }
+
+    // Cập nhật tab mô tả sản phẩm
+    if (elTab1) {
+      elTab1.innerHTML = product.tab1 || "<p>Không có mô tả cho sản  phẩm này.</p>";
+    }
+
+    // GÁN SỰ KIỆN CLICK CHO NÚT MUA NGAY TẠI ĐÂY
+    if (elAddToCartBtn) {
+      elAddToCartBtn.addEventListener("click", function () {
+        // Tạo đối tượng sản phẩm để thêm vào giỏ hàng từ dữ liệu đã tải
+        let productToAdd = {
+          id: product.id,
+          name: product.title,
+          price: parseInt(product.priceNew.replace(/\D/g, "")),
+          img: product.mainImg,
+          qty: 1
+        };
+
+        // Lấy giỏ hàng từ localStorage
+        let cart = JSON.parse(localStorage.getItem("cart")) || [];
+        let exist = cart.find(p => p.id === productToAdd.id);
+        
+        // Thêm hoặc cập nhật số lượng sản phẩm
+        if (exist) {
+          exist.qty += 1;
+        } else {
+          cart.push(productToAdd);
+        }
+
+        // Lưu giỏ hàng mới vào localStorage
+        localStorage.setItem("cart", JSON.stringify(cart));
+        // Sau khi đã thêm sản phẩm vào localStorage
+
+
+
+updateCartCount(); 
+
+        
+        // Chuyển hướng sang trang giỏ hàng
+        window.location.href = "card.html";
+      });
+    }
+  }
+
+  // Code cho slider (có thể đặt ở ngoài block if/else này)
+  let thumbIndex = 0;
+  const visibleThumbs = 5;
+  const totalThumbs = product ? product.thumbs.length : 0;
+  const btnPrev = document.querySelector('.btn-prev');
+  const btnNext = document.querySelector('.btn-next');
+
+  function updateThumbsPosition() {
+    const slideWidth = slickTrack.querySelector('.slick-slide')?.offsetWidth || 80;
+    slickTrack.style.transform = `translateX(-${thumbIndex * (slideWidth + 8)}px)`;
   }
   
-    const elTab1 = document.getElementById("tab1");
-  if (product && product.tab1) {
-    elTab1.innerHTML = product.tab1;
-  } else {
-    elTab1.innerHTML = "<p>Không có mô tả cho sản phẩm này.</p>";
+  if (btnPrev) {
+    btnPrev.addEventListener('click', () => {
+      if (thumbIndex > 0) {
+        thumbIndex--;
+        updateThumbsPosition();
+      }
+    });
   }
+
+  if (btnNext) {
+    btnNext.addEventListener('click', () => {
+      if (thumbIndex < totalThumbs - visibleThumbs) {
+        thumbIndex++;
+        updateThumbsPosition();
+      }
+    });
+  }
+  
+  updateThumbsPosition(); // Hiển thị thumb đầu tiên khi load
 </script>
-<script>// ...existing code...
-
-let thumbIndex = 0;
-const visibleThumbs = 5; // Số lượng thumbnail muốn hiển thị cùng lúc
-const totalThumbs = product.thumbs.length;
-const btnPrev = document.querySelector('.btn-prev');
-const btnNext = document.querySelector('.btn-next');
-function updateThumbsPosition() {
-  const slideWidth = slickTrack.querySelector('.slick-slide')?.offsetWidth || 80;
-  slickTrack.style.transform = `translateX(-${thumbIndex * (slideWidth + 8)}px)`;
-}
-
-// Nút prev
-if (btnPrev) {
-  btnPrev.addEventListener('click', () => {
-    if (thumbIndex > 0) {
-      thumbIndex--;
-      updateThumbsPosition();
-    }
-  });
-}
-// Nút next
-if (btnNext) {
-  btnNext.addEventListener('click', () => {
-    if (thumbIndex < totalThumbs - visibleThumbs) {
-      thumbIndex++;
-      updateThumbsPosition();
-    }
-  });
-}
-
-// Hiển thị thumb đầu tiên khi load
-updateThumbsPosition(); 
-
-// ...existing code...</script>
-
-
+<script src="search-global-script copy.js"></script>
   </body>
 </html>

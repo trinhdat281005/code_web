@@ -53,7 +53,9 @@
 							<li><a class=" list-unstyled text-decoration-none" rel="nofollow" href="./DangKi.html" title="Đăng ký">Đăng ký</a></li>
 							
 						</ul>
-			 <li class="list-unstyled mx-3">
+					</li>
+				
+        <li class="list-unstyled mx-3">
               <a class="   text-decoration-none text-dark text-uppercase fw-bold mx-1 position-relative" href="./card.html">
                 <span class="d-none d-lg-inline" >Giỏ hàng</span>
                 <i class="fa-solid fa-cart-shopping">
@@ -218,12 +220,39 @@
         </nav>
       </div>
     </header>
-    <!------------------------------------Thanh tìm kiếm ------------------>
-<div class="search-overlay-container">
-    <div class="search-overlay"></div>
-    <div class="search-form-box">
+  <!---Thanh tìm kiếmmmmm-->
+    <div class="search-overlay-container">
+    <div class="search-overlay "></div>
+    <div class="search-form-box ">
         <form action="search.html" method="get" class="search-form">
             <input type="text" name="query" placeholder="Bạn cần tìm gì hôm nay?" class="search-input">
+            <button type="submit" class="search-button ">
+                <i class="fa-solid fa-magnifying-glass"></i>
+            </button>
+        </form>
+        <button class="close-search-btn m-2">
+            <i class="fa-solid fa-xmark"></i>
+        </button>
+    </div>
+</div>
+<!----Trang tìm kiếm----------------------------------->
+<div class="container py-5">
+  <nav style="--bs-breadcrumb-divider: '>';" aria-label="breadcrumb">
+  <ol class="breadcrumb">
+    <li class="breadcrumb-item  "><a class="text-decoration-none text-black" href="./index.html">Trang chủ</a></li>
+    <li class="breadcrumb-item active "  id="breadcrumb-title" aria-current="page">kết quả tìm kiếm</li>
+  </ol>
+</nav>
+            <h2 class="search-results-heading"></h2>
+            <div id="search-results" class="row">
+                </div>
+            <div id="no-results-message" class="text-center" style="display: none;">
+                <p>KHÔNG TÌM THẤY BẤT KỲ KẾT QUẢ NÀO VỚI TỪ KHOÁ TRÊN.</p>
+                <p>Vui lòng nhập từ khóa tìm kiếm khác</p>
+            </div>
+                <div class="searchbottom-form-box">
+          <form action="search.html" method="get" class="searchbottom-form">
+            <input type="text" name="query" placeholder="Bạn cần tìm gì hôm nay?" class="searchbottom-input">
             <button type="submit" class="search-button">
                 <i class="fa-solid fa-magnifying-glass"></i>
             </button>
@@ -232,88 +261,7 @@
             <i class="fa-solid fa-xmark"></i>
         </button>
     </div>
-</div>
-    <!--  Menu -->
-   <section>
-     <div class="evo-blog-header">
-	<div class="container">
-		<div class="row">
-			<div class="col-md-10 col-md-offset-1">
-				<div class="evo-blog-header-content">
-					<h1>Hệ thống cửa hàng</h1>
-				</div>
-			</div>
-		</div>
-	</div>
-</div>
-      </section>
-      <section class="mt-5">
- <div class="container my-5">
-  <div class="row">
-    <!-- Cột bên trái: danh sách cửa hàng -->
-    <div class="col-xs-12 col-sm-4 col-md-4">
-      <h6 class="fw-bold">Chọn tỉnh thành phố</h6>
-      <select id="city" class="form-select mb-3">
-        <option value="hanoi">Hà Nội</option>
-        <option value="hcm">Hồ Chí Minh</option>
-      </select>
-
-      <ul class="list-group border-3" id="store-list">
-        <!-- JS sẽ render các địa chỉ vào đây -->
-      </ul>
-    </div>
-
-    <!-- Cột bên phải: Google Map -->
-    <div class="col-xs-12 col-sm-8 col-md-8">
-      <iframe
-        id="map"
-        src=""
-        width="100%"
-        height="400"
-        style="border:0;"
-        allowfullscreen=""
-        loading="lazy"
-        referrerpolicy="no-referrer-when-downgrade">
-      </iframe>
-    </div>
-  </div>
-</div>
-<section>
-  <div class="container">
-    <div class="row">
-<div class="col-md-6 ">
-<p  >
-  <img class="img-fluid" src="//bizweb.dktcdn.net/100/292/624/files/7d39427c-eea5-41d8-b28a-c43bdc8d0f30.jpg?v=1678265458906">
-</p>
-</div>
-<div class="col-md-6 small ">
-
-<p style="text-align: center;"><span style="font-size:24px;"><strong class="small">HỆ THỐNG CỬA HÀNG</strong></span></p>
-<p style="text-align: center;"><span style="font-size:20px;"><strong class="small">THÀNH PHỐ HỒ CHÍ MINH:</strong></span></p>
-<p style="text-align: center;"><span style="font-family:Verdana,Geneva,sans-serif;"><span style="font-size:18px;">73 Lý Tự Trọng, Phường Bến Thành, Quận 1</span></span></p>
-<p style="text-align: center;"><span style="font-family:Verdana,Geneva,sans-serif;"><span style="font-size:18px;"><i aria-hidden="true"></i>13 Nguyễn Thiện Thuật, Phường 2, Quận 3</span></span></p>
-<p style="text-align: center;"><span style="font-family:Verdana,Geneva,sans-serif;"><span style="font-size:18px;"><i aria-hidden="true"></i>210B Hồ Văn Huê, Phường 9, Quận Phú Nhuận</span></span></p>
-<p style="text-align: center;"><span style="font-size: 20px;"><b class="small">HÀ NỘI:</b></span></p>
-<p style="text-align: center;"><span style="font-family:Verdana,Geneva,sans-serif;"><span style="font-size:18px;">261 Phố Huế, Hai Bà Trưng</span></span></p>
-<p style="text-align: center;">&nbsp;</p>
-<p style="text-align: center;"><span style="font-size: 20px;"><b class="small">ĐÀ NẴNG:</b></span></p>
-<p style="text-align: center;"><span style="font-family:Verdana,Geneva,sans-serif;"><span style="font-size:18px;">371 Lê Duẩn, Phường Tân Chính,&nbsp;Quận Thanh Khê</span></span></p>
-<p style="text-align: center;">&nbsp;</p>
-<p style="text-align: center;">&nbsp;</p>
-<p style="text-align: center;"><span style="font-size: 20px;"><b class="small">BANGKOK, THAILAND:</b></span></p>
-<p style="text-align: center;"><span style="font-family:Verdana,Geneva,sans-serif;"><span style="font-size:18px;">69/36 Phaya Thai Rd, Ratchathewi (near BTS Phaya Thai)</span></span></p>
-<p style="text-align: center;">&nbsp;</p>
-<p style="text-align: center;"><span style="font-family:Verdana,Geneva,sans-serif;"><span style="font-size:16px;">Thời gian làm việc: <span style="color:#4e5f70;">09:00 - 22:00</span></span></span></p>
-<p style="text-align: center;"><span style="font-family:Verdana,Geneva,sans-serif;"><span style="font-size:16px;"><span style="color:#4e5f70;">Có chỗ đỗ Ôtô</span></span></span></p>
-<p style="text-align: center;"><span style="font-family:Verdana,Geneva,sans-serif;"><span style="font-size:16px;">Hotline: <span style="color:#4e5f70;"><a href="tel:(+84) 898515689">(+84) 898515689</a></span></span></span></p>
-<p style="text-align: center;">&nbsp;</p></div>
-</div>
-
-  </div>
-</section>
-    
-</section>
-   
+        </div>
     <footer class="bg-light  py-5  border-bottom cuoi ">
       <!-- place footer here -->
       <div class="container n ">
@@ -535,6 +483,47 @@
     ></script>
 
 <script src="stores.js"></script>
-<script src="search-global-script copy.js"></script>
+<script>
+  // Thanh tìm kiếm 
+  document.addEventListener('DOMContentLoaded', function() {
+    const searchIcon = document.querySelector('.search-icon-link');
+    const searchOverlay = document.querySelector('.search-overlay-container');
+    const closeSearchBtn = document.querySelector('.close-search-btn');
+    const searchInput = document.querySelector('.search-input');
+
+    // Hiển thị thanh tìm kiếm khi click vào icon kính lúp
+    if (searchIcon) {
+        searchIcon.addEventListener('click', function(e) {
+            e.preventDefault(); // Ngăn chặn hành động mặc định của thẻ <a>
+            searchOverlay.classList.add('active');
+            document.body.style.overflow = 'hidden'; // Ngăn cuộn trang
+            searchInput.focus(); // Tự động focus vào ô input
+        });
+    }
+
+    // Ẩn thanh tìm kiếm khi click vào nút "X"
+    if (closeSearchBtn) {
+        closeSearchBtn.addEventListener('click', function() {
+            searchOverlay.classList.remove('active');
+            document.body.style.overflow = ''; // Cho phép cuộn trang trở lại
+        });
+    }
+    
+    // Ẩn thanh tìm kiếm khi click vào nền mờ
+    if (searchOverlay) {
+        searchOverlay.addEventListener('click', function(e) {
+            if (e.target === searchOverlay || e.target.classList.contains('search-overlay')) {
+                searchOverlay.classList.remove('active');
+                document.body.style.overflow = '';
+            }
+        });
+    }
+});
+</script>
+ <script src="products.js"></script>
+></script>
+   <script src="search-script.js"></script>
+   <script src="search-global-script copy.js"></script>
+
   </body>
 </html>
